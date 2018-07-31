@@ -8,7 +8,8 @@
   "license": "MIT",
   "dependencies": {
     "classnames": "^2.2.6",
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.10",
+    "react-tippy": "^1.2.2"
   },
   "devDependencies": {
     "prop-types": "^15.6.2",
