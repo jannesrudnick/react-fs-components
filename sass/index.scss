@@ -1,0 +1,9 @@
+
+@import "./components/tooltip/tooltip";
+
+@mixin fs-components($prefix: '.fs--') {
+
+  // tooltip
+  @include fs-component--tooltip;
+
+}
