@@ -5,5 +5,13 @@
   "main": "src/index.js",
   "repository": "https://github.com/florianstahr/react-fs-components.git",
   "author": "Florian Stahr <mail@florianstahr.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1"
+  }
 }
