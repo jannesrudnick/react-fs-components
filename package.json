@@ -6,6 +6,12 @@
   "repository": "https://github.com/florianstahr/react-fs-components.git",
   "author": "Florian Stahr <mail@florianstahr.com>",
   "license": "MIT",
+  "keywords": [
+    "reactjs",
+    "components",
+    "styled",
+    "customizable"
+  ],
   "dependencies": {
     "classnames": "^2.2.6",
     "lodash": "^4.17.10",
