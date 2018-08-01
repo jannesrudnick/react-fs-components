@@ -1,0 +1,249 @@
+
+@import "../../config";
+@import "../../_utils/flexbox";
+
+@mixin fs-component--action-btns($prefix) {
+
+  #{$prefix}action-btns {
+    @include flexbox;
+    @include justify-content(flex-start);
+    @include align-items(center);
+
+    #{$prefix}action-btn,
+    #{$prefix}action-btn-group,
+    #{$prefix}action-btn-group-item {
+      margin: 4px 8px 4px 0;
+      background-color: $fs__color__background__primary;
+      border: 1px solid $fs__color__accent__primary;
+      padding: 4px 8px;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: $fs__color__accent__primary;
+      cursor: pointer;
+      user-select: none;
+      outline: none;
+      font-weight: 500;
+      border-radius: 4px;
+
+      &#{$prefix}action-btn-type-drag-n-drop {
+        cursor: move;
+      }
+
+      #{$prefix}action-btn-icon-before {
+        margin-right: 4px;
+      }
+
+      &[data-disabled='true'] {
+        cursor: not-allowed;
+        opacity: .75;
+      }
+
+      &[data-highlight='true'] {
+        background-color: lighten($fs__color__accent__primary, 4);
+        color: $fs__color__background__primary;
+      }
+
+      &:not([data-disabled='true']):active {
+        background-color: $fs__color__accent__primary;
+        color: $fs__color__background__primary;
+      }
+
+      #{$prefix}action-btn-text-icon-left {
+        margin-right: 4px;
+      }
+    }
+
+    #{$prefix}action-btn {
+
+      &, [data-tooltipped] {
+        display: flex!important;
+        @include justify-content(center);
+        @include align-items(center);
+      }
+    }
+
+    &[data-justify='center'] {
+      @include justify-content(center);
+
+      #{$prefix}action-btn {
+        margin: 4px;
+      }
+    }
+
+    &[data-justify='end'] {
+      @include justify-content(flex-end);
+
+      #{$prefix}action-btn {
+        margin: 4px 0 4px 8px;
+      }
+    }
+
+    &[data-size='xs'] {
+      #{$prefix}action-btn {
+        font-size: 10px;
+      }
+    }
+
+    &[data-size='sm'] {
+      #{$prefix}action-btn {
+        font-size: 11.5px;
+        padding: 2px 4px;
+        font-weight: 300;
+      }
+    }
+
+    &[data-size='lg'] {
+      #{$prefix}action-btn {
+        font-size: 18px;
+        padding: 4px 8px;
+        font-weight: 300;
+      }
+    }
+
+    #{$prefix}action-btn-group {
+      padding: 0;
+      @include flexbox;
+    }
+
+    #{$prefix}action-btn-group-item {
+      margin: 0;
+      border-width: 0;
+      border-radius: 0;
+
+      &:first-child {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+    }
+
+    &[data-btn-type='icon'] {
+      #{$prefix}action-btn {
+        width: 22px;
+        height: 22px;
+        margin: 2px;
+        padding: 2px;
+        font-size: 20px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      &[data-size='xs'] #{$prefix}action-btn {
+        width: 18px;
+        height: 18px;
+        font-size: 16px;
+      }
+
+      &[data-size='sm'] #{$prefix}action-btn {
+        width: 19.5px;
+        height: 19.5px;
+        font-size: 17.5px;
+      }
+
+      &[data-size='lg'] #{$prefix}action-btn {
+        width: 24px;
+        height: 24px;
+        font-size: 22px;
+      }
+
+    }
+
+    &[data-btn-style='dark'] #{$prefix}action-btn, #{$prefix}action-btn[data-btn-style='dark']  {
+
+    }
+
+    &[data-btn-style='light'] #{$prefix}action-btn, #{$prefix}action-btn[data-btn-style='light']  {
+      background-color: transparent;
+      border-color: transparent;
+      color: $fs__color__border__dark;
+
+      &:hover, &[data-highlight='true'] {
+        color: $fs__color__accent__primary;
+      }
+      &:active {
+        background-color: transparent;
+      }
+    }
+
+    &#{$prefix}action-btns-no-bg {
+      #{$prefix}action-btn  {
+        background-color: transparent;
+        color: $fs__color__border__dark;
+        font-size: 20px;
+
+        &:hover {
+          background-color: inherit;
+          color: lighten($fs__color__accent__primary, 4);
+        }
+        &:active, &#{$prefix}action-btn-highlight {
+          background-color: inherit;
+          color: $fs__color__accent__primary;
+        }
+
+        &[data-disabled='true']:hover, &[data-disabled='true']:active {
+          background-color: transparent;
+          color: $fs__color__border__dark;
+          cursor: initial;
+        }
+      }
+      &#{$prefix}action-btns-type-icon {
+        #{$prefix}action-btn {
+          border: none;
+        }
+      }
+    }
+
+    &#{$prefix}action-btns-no-border-no-bg {
+      #{$prefix}action-btn {
+        border: none;
+      }
+    }
+
+    &#{$prefix}action-btns-small {
+      &#{$prefix}action-btns-type-icon #{$prefix}action-btn {
+        font-size: 18px;
+        width: 20px;
+        height: 20px;
+      }
+
+      #{$prefix}action-btn {
+        font-size: 11.5px;
+        padding: 2px 4px;
+        font-weight: 300;
+
+      }
+    }
+
+    #{$prefix}action-btn {
+      &#{$prefix}action-btn-no-bg, &#{$prefix}action-btn-no-bg:hover, &#{$prefix}action-btn-no-bg:active {
+        background-color: transparent;
+      }
+      &#{$prefix}action-btn-no-border, &#{$prefix}action-btn-no-border:hover, &#{$prefix}action-btn-no-border:active {
+        border-color: transparent;
+      }
+      &#{$prefix}action-btn-bg-accent {
+        color: $fs__color__background__primary;
+      }
+      &#{$prefix}action-button-light {
+        background-color: transparent;
+        color: $fs__color__background__primary;
+        font-size: 20px;
+
+        &:hover {
+          background-color: inherit;
+          color: lighten($fs__color__accent__primary, 4);
+        }
+
+        &[data-disabled='true']:hover, &[data-disabled='true']:active {
+          background-color: transparent;
+          color: $fs__color__border__dark;
+          cursor: initial;
+        }
+      }
+    }
+  }
+}

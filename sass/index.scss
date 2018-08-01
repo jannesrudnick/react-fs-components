@@ -1,7 +1,14 @@
 
+// action-btns
+@import "./components/action-btns/action-btns";
+
+// tooltip
 @import "./components/tooltip/tooltip";
 
 @mixin fs-components($prefix: '.fs--') {
+
+  // action-btns
+  @include fs-component--action-btns($prefix);
 
   // tooltip
   @include fs-component--tooltip;
