@@ -1,10 +1,21 @@
 {
-    "extends": ["eslint:recommended", "plugin:react/recommended", "airbnb"],
-    "parser": "babel-eslint",
-    "env": {
-        "browser": true
-    },
-    "plugins": [
-        "react"
-    ]
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "airbnb"
+  ],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "camelcase": "off",
+    "react/forbid-prop-types": "off",
+    "react/prefer-stateless-function": "off",
+    "react/jsx-pascal-case": "off",
+    "jsx-a11y/click-events-have-key-events": "off"
+  }
 }

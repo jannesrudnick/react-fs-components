@@ -1,57 +1,60 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {Tooltip} from 'react-tippy';
+import { Tooltip } from 'react-tippy';
 import FS_Defaults from '../../defaults';
 
 const position = {
-    TOP: 'top',
-    RIGHT: 'right',
-    BOTTOM: 'bottom',
-    LEFT: 'left'
+  TOP: 'top',
+  RIGHT: 'right',
+  BOTTOM: 'bottom',
+  LEFT: 'left',
 };
 
 const size = {
-    SMALL: 'small',
-    REGULAR: 'regular',
-    BIG: 'big'
+  SMALL: 'small',
+  REGULAR: 'regular',
+  BIG: 'big',
 };
 
 class FS_Tooltip extends Component {
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    classPrefix: PropTypes.string,
+  };
 
-    static propTypes = {
-        title: PropTypes.string.isRequired,
-        type: PropTypes.string,
-        classPrefix: PropTypes.string,
+  static defaultProps = {
+    classPrefix: FS_Defaults.classPrefix,
+  };
+
+  defaultTooltipProps = {
+    position: position.TOP,
+    size: size.SMALL,
+    arrow: true,
+    classPrefix: FS_Defaults.classPrefix,
+  };
+
+  render() {
+    const { title, children, ...other } = this.props;
+
+    const style = {
+      ...other.style,
     };
 
-    defaultTooltipProps = {
-        position: position.TOP,
-        size: size.SMALL,
-        arrow: true,
-        classPrefix: FS_Defaults.classPrefix,
+    const tooltipProps = {
+      ...this.defaultTooltipProps,
+      ...other,
+      style,
+      title,
     };
 
-    render() {
-
-        const {title, children, ...other} = this.props;
-
-        const style = {
-            ...other.style,
-        };
-
-        const tooltipProps = {
-            ...this.defaultTooltipProps,
-            ...other,
-            style,
-            title,
-        };
-
-        return <Tooltip
-            {...tooltipProps}
-        >
-            {children}
-        </Tooltip>
-    }
+    return (
+      <Tooltip
+        {...tooltipProps}
+      >
+        {children}
+      </Tooltip>
+    );
+  }
 }
 
 FS_Tooltip.size = size;
