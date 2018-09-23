@@ -1,6 +1,6 @@
 {
   "name": "react-fs-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "react components i use quite often in my projects",
   "main": "dist/react-fs-components.js",
   "repository": "https://github.com/florianstahr/react-fs-components.git",
@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "prepublish": "rm -rf ./dist && npm run build"
+    "prepare": "rm -rf ./dist && npm run build"
   },
   "peerDependencies": {
     "react": ">=16.4.1",
