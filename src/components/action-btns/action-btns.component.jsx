@@ -6,32 +6,7 @@ import isPlainObject from 'lodash/isPlainObject';
 import FS_ActionBtn from './action-btn.component';
 import FS_ActionBtnsGroup from './action-btns-group.component';
 import FS_Defaults from '../../defaults';
-
-const constants = {
-  btnStyle: {
-    DEFAULT: 'default',
-    LIGHT: 'light',
-    DARK: 'dark',
-  },
-  btnType: {
-    DEFAULT: 'text',
-    TEXT: 'text',
-    ICON: 'icon',
-    ICON_LEFT_TEXT: 'icon-text',
-    ICON_RIGHT_TEXT: 'text-icon',
-  },
-  size: {
-    ULTRA_SMALL: 'xs',
-    SMALL: 'sm',
-    MEDIUM: 'md',
-    LARGE: 'lg',
-  },
-  justify: {
-    START: 'start',
-    CENTER: 'center',
-    END: 'end',
-  },
-};
+import FS_Constants from '../../constants';
 
 class FS_ActionBtns extends Component {
   static propTypes = {
@@ -60,27 +35,27 @@ class FS_ActionBtns extends Component {
       }),
     ).isRequired,
     justify: PropTypes.oneOf([
-      constants.justify.START,
-      constants.justify.CENTER,
-      constants.justify.END,
+      FS_Constants.ActionBtns.justify.START,
+      FS_Constants.ActionBtns.justify.CENTER,
+      FS_Constants.ActionBtns.justify.END,
     ]),
     btnType: PropTypes.oneOf([
-      constants.btnType.DEFAULT,
-      constants.btnType.TEXT,
-      constants.btnType.ICON,
-      constants.btnType.ICON_LEFT_TEXT,
-      constants.btnType.ICON_RIGHT_TEXT,
+      FS_Constants.ActionBtns.btnType.DEFAULT,
+      FS_Constants.ActionBtns.btnType.TEXT,
+      FS_Constants.ActionBtns.btnType.ICON,
+      FS_Constants.ActionBtns.btnType.ICON_LEFT_TEXT,
+      FS_Constants.ActionBtns.btnType.ICON_RIGHT_TEXT,
     ]),
     size: PropTypes.oneOf([
-      constants.size.ULTRA_SMALL,
-      constants.size.SMALL,
-      constants.size.MEDIUM,
-      constants.size.LARGE,
+      FS_Constants.ActionBtns.size.ULTRA_SMALL,
+      FS_Constants.ActionBtns.size.SMALL,
+      FS_Constants.ActionBtns.size.MEDIUM,
+      FS_Constants.ActionBtns.size.LARGE,
     ]),
     btnStyle: PropTypes.oneOf([
-      constants.btnStyle.DEFAULT,
-      constants.btnStyle.DARK,
-      constants.btnStyle.LIGHT,
+      FS_Constants.ActionBtns.btnStyle.DEFAULT,
+      FS_Constants.ActionBtns.btnStyle.DARK,
+      FS_Constants.ActionBtns.btnStyle.LIGHT,
     ]),
     classPrefix: PropTypes.string,
     containerInlineStyle: PropTypes.object,
@@ -90,8 +65,8 @@ class FS_ActionBtns extends Component {
     containerClassNames: [],
     justify: null,
     btnType: null,
-    size: constants.size.MEDIUM,
-    btnStyle: constants.btnStyle.DEFAULT,
+    size: FS_Constants.ActionBtns.size.MEDIUM,
+    btnStyle: FS_Constants.ActionBtns.btnStyle.DEFAULT,
     classPrefix: FS_Defaults.classPrefix,
     containerInlineStyle: {},
   };
@@ -146,9 +121,9 @@ class FS_ActionBtns extends Component {
   }
 }
 
-FS_ActionBtns.btnStyle = constants.btnStyle;
-FS_ActionBtns.btnType = constants.btnType;
-FS_ActionBtns.size = constants.size;
-FS_ActionBtns.justify = constants.justify;
+FS_ActionBtns.btnStyle = FS_Constants.ActionBtns.btnStyle;
+FS_ActionBtns.btnType = FS_Constants.ActionBtns.btnType;
+FS_ActionBtns.size = FS_Constants.ActionBtns.size;
+FS_ActionBtns.justify = FS_Constants.ActionBtns.justify;
 
 export default FS_ActionBtns;
