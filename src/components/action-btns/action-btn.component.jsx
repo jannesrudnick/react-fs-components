@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import FS_ActionBtns from './action-btns.component';
 import FS_Defaults from '../../defaults';
 import FS_Tooltip from '../tooltip/tooltip.component';
+import FS_Constants from '../../constants';
 
 class FS_ActionBtn extends Component {
   static propTypes = {
@@ -22,16 +22,16 @@ class FS_ActionBtn extends Component {
     highlight: PropTypes.bool,
     enabled: PropTypes.bool,
     btnStyle: PropTypes.oneOf([
-      FS_ActionBtns.btnStyle.DEFAULT,
-      FS_ActionBtns.btnStyle.DARK,
-      FS_ActionBtns.btnStyle.LIGHT,
+      FS_Constants.ActionBtns.btnStyle.DEFAULT,
+      FS_Constants.ActionBtns.btnStyle.DARK,
+      FS_Constants.ActionBtns.btnStyle.LIGHT,
     ]),
     btnType: PropTypes.oneOf([
-      FS_ActionBtns.btnType.DEFAULT,
-      FS_ActionBtns.btnType.TEXT,
-      FS_ActionBtns.btnType.ICON,
-      FS_ActionBtns.btnType.ICON_LEFT_TEXT,
-      FS_ActionBtns.btnType.ICON_RIGHT_TEXT,
+      FS_Constants.ActionBtns.btnType.DEFAULT,
+      FS_Constants.ActionBtns.btnType.TEXT,
+      FS_Constants.ActionBtns.btnType.ICON,
+      FS_Constants.ActionBtns.btnType.ICON_LEFT_TEXT,
+      FS_Constants.ActionBtns.btnType.ICON_RIGHT_TEXT,
     ]),
     classPrefix: PropTypes.string,
     btnProps: PropTypes.object,
