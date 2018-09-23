@@ -1,6 +1,5 @@
-
 const FS_Defaults = {
-    classPrefix: 'fs--'
+  classPrefix: 'fs--',
 };
 
 export default FS_Defaults;
