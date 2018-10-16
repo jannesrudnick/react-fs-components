@@ -2,6 +2,9 @@
 // action-btns
 @import "./components/action-btns/action-btns";
 
+// toggle
+@import "./components/toggle/toggle";
+
 // tooltip
 @import "./components/tooltip/tooltip";
 
@@ -9,6 +12,9 @@
 
   // action-btns
   @include fs-component--action-btns($prefix);
+
+  // toggle
+  @include fs-component--toggle($prefix);
 
   // tooltip
   @include fs-component--tooltip;

@@ -1,0 +1,5 @@
+@import "../../includes/toggle/toggle";
+
+@mixin fs-component--toggle($prefix: '.') {
+  @include fs-components--includes--react-toggle($prefix);
+}
