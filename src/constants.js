@@ -25,8 +25,21 @@ const ActionBtns = {
   },
 };
 
+const Switch = {
+  selectedType: {
+    ITEM_INDEX: 'number',
+    ITEM_VALUE: 'item_value',
+  },
+  size: {
+    DEFAULT: 'medium',
+    SMALL: 'small',
+    LARGE: 'large',
+  },
+};
+
 const FS_Constants = {
   ActionBtns,
+  Switch,
 };
 
 export default FS_Constants;

@@ -2,6 +2,9 @@
 // action-btns
 @import "./components/action-btns/action-btns";
 
+// switch
+@import "./components/switch/switch";
+
 // toggle
 @import "./components/toggle/toggle";
 
@@ -12,6 +15,9 @@
 
   // action-btns
   @include fs-component--action-btns($prefix);
+
+  // switch
+  @include fs-component--switch($prefix);
 
   // toggle
   @include fs-component--toggle($prefix);
