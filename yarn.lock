@@ -4048,6 +4048,11 @@ split-string@^3.0.1, split-string@^3.0.2:
   dependencies:
     extend-shallow "^3.0.0"
 
+split.js@^1.5.4:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/split.js/-/split.js-1.5.4.tgz#099af10d1e6703bd9dffd095c25638ebeafee53e"
+  integrity sha512-0NxMUUtCsV5Rd2JpL50axOcmACpEwuTrs4EeI6l1TNH7SwT4Fj1IrPRQTtf3jlGGMJImY3I2fXOTz25m6wmh3w==
+
 sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"

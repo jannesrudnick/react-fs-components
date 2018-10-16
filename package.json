@@ -26,6 +26,7 @@
     "prop-types": "^15.6.2",
     "react-tippy": "^1.2.2",
     "react-toggle": "^4.0.2",
+    "split.js": "^1.5.4",
     "webpack": "^4.19.1"
   },
   "devDependencies": {

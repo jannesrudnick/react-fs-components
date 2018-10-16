@@ -25,6 +25,13 @@ const ActionBtns = {
   },
 };
 
+const Split = {
+  direction: {
+    HORIZONTAL: 'horizontal',
+    VERTICAL: 'vertical',
+  },
+};
+
 const Switch = {
   selectedType: {
     ITEM_INDEX: 'number',
@@ -39,6 +46,7 @@ const Switch = {
 
 const FS_Constants = {
   ActionBtns,
+  Split,
   Switch,
 };
 

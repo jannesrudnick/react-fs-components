@@ -6,6 +6,9 @@ import FS_ActionBtns from './components/action-btns/action-btns.component';
 import FS_ActionBtnsGroup from './components/action-btns/action-btns-group.component';
 import FS_ActionBtn from './components/action-btns/action-btn.component';
 
+// split
+import FS_Split from './components/split/split';
+
 // switch
 import FS_Switch from './components/switch/switch';
 
@@ -21,6 +24,8 @@ export {
   FS_ActionBtns,
   FS_ActionBtnsGroup,
   FS_ActionBtn,
+
+  FS_Split,
 
   FS_Switch,
 

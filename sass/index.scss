@@ -2,6 +2,9 @@
 // action-btns
 @import "./components/action-btns/action-btns";
 
+// split
+@import "./components/split/split";
+
 // switch
 @import "./components/switch/switch";
 
@@ -15,6 +18,9 @@
 
   // action-btns
   @include fs-component--action-btns($prefix);
+
+  // split
+  @include fs-component--split($prefix);
 
   // switch
   @include fs-component--switch($prefix);
