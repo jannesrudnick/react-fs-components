@@ -5,6 +5,9 @@
 // select
 @import "./components/select/select";
 
+// simple-dialog
+@import "./components/simple-dialog/simple-dialog";
+
 // split
 @import "./components/split/split";
 
@@ -24,6 +27,9 @@
 
   // select
   @include fs-component--select($prefix);
+
+  // simple-dialog
+  @include fs-component--simple-dialog($prefix);
 
   // split
   @include fs-component--split($prefix);

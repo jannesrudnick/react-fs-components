@@ -9,6 +9,9 @@ import FS_ActionBtn from './components/action-btns/action-btn.component';
 // select
 import FS_Select from './components/select/select';
 
+// simple-dialog
+import FS_SimpleDialog from './components/simple-dialog/simple-dialog.component';
+
 // split
 import FS_Split from './components/split/split';
 
@@ -29,6 +32,8 @@ export {
   FS_ActionBtn,
 
   FS_Select,
+
+  FS_SimpleDialog,
 
   FS_Split,
 
