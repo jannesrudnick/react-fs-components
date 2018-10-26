@@ -7,16 +7,16 @@ import FS_ActionBtnsGroup from './components/action-btns/action-btns-group.compo
 import FS_ActionBtn from './components/action-btns/action-btn.component';
 
 // select
-import FS_Select from './components/select/select';
+import FS_Select from './components/select/select.component';
 
 // simple-dialog
 import FS_SimpleDialog from './components/simple-dialog/simple-dialog.component';
 
 // split
-import FS_Split from './components/split/split';
+import FS_Split from './components/split/split.component';
 
 // switch
-import FS_Switch from './components/switch/switch';
+import FS_Switch from './components/switch/switch.component';
 
 // toggle
 import FS_Toggle from './components/toggle/toggle.component';

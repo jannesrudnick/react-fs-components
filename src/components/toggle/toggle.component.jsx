@@ -4,8 +4,6 @@ import Toggle from 'react-toggle';
 import classnames from 'classnames';
 import FS_Defaults from '../../defaults';
 
-console.log('uuu');
-
 class FS_Toggle extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,

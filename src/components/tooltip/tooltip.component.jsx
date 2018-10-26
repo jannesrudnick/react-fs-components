@@ -2,19 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Tooltip } from 'react-tippy';
 import FS_Defaults from '../../defaults';
-
-const position = {
-  TOP: 'top',
-  RIGHT: 'right',
-  BOTTOM: 'bottom',
-  LEFT: 'left',
-};
-
-const size = {
-  SMALL: 'small',
-  REGULAR: 'regular',
-  BIG: 'big',
-};
+import FS_Constants from '../../constants';
 
 class FS_Tooltip extends Component {
   static propTypes = {
@@ -27,8 +15,8 @@ class FS_Tooltip extends Component {
   };
 
   defaultTooltipProps = {
-    position: position.TOP,
-    size: size.SMALL,
+    position: FS_Constants.Tooltip.position.TOP,
+    size: FS_Constants.Tooltip.size.SMALL,
     arrow: true,
     classPrefix: FS_Defaults.classPrefix,
   };
@@ -57,7 +45,6 @@ class FS_Tooltip extends Component {
   }
 }
 
-FS_Tooltip.size = size;
-FS_Tooltip.position = position;
+FS_Tooltip.constants = FS_Constants.Tooltip;
 
 export default FS_Tooltip;

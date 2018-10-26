@@ -44,10 +44,25 @@ const Switch = {
   },
 };
 
+const Tooltip = {
+  position: {
+    TOP: 'top',
+    RIGHT: 'right',
+    BOTTOM: 'bottom',
+    LEFT: 'left',
+  },
+  size: {
+    SMALL: 'small',
+    REGULAR: 'regular',
+    BIG: 'big',
+  },
+};
+
 const FS_Constants = {
   ActionBtns,
   Split,
   Switch,
+  Tooltip,
 };
 
 export default FS_Constants;

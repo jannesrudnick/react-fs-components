@@ -73,12 +73,11 @@
           top: 1.5px;
           width: 50px;
           height: 5px;
-          background: $fs__color__background__primary url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
           background-size: 30px 5px;
-          background-position: 10px 0;
-          background-repeat: no-repeat;
+          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=') no-repeat 10px 0;
         }
       }
     }
   }
+
 }

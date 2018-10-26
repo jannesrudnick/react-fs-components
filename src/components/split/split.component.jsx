@@ -148,4 +148,6 @@ class FS_Split extends Component {
   }
 }
 
+FS_Split.constants = FS_Constants.Split;
+
 export default FS_Split;

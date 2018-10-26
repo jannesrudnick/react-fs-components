@@ -107,4 +107,6 @@ class FS_Switch extends Component {
   }
 }
 
+FS_Switch.constants = FS_Constants.Switch;
+
 export default FS_Switch;

@@ -121,9 +121,6 @@ class FS_ActionBtns extends Component {
   }
 }
 
-FS_ActionBtns.btnStyle = FS_Constants.ActionBtns.btnStyle;
-FS_ActionBtns.btnType = FS_Constants.ActionBtns.btnType;
-FS_ActionBtns.size = FS_Constants.ActionBtns.size;
-FS_ActionBtns.justify = FS_Constants.ActionBtns.justify;
+FS_ActionBtns.constants = FS_Constants.ActionBtns;
 
 export default FS_ActionBtns;

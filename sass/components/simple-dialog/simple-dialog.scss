@@ -2,6 +2,7 @@
 @import "../../_utils/flexbox";
 
 @mixin fs-component--simple-dialog($prefix) {
+
   #{$prefix}simple-dialog--background {
     position: fixed;
     top: 0;
