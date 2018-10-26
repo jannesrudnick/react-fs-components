@@ -2,6 +2,9 @@
 // action-btns
 @import "./components/action-btns/action-btns";
 
+// select
+@import "./components/select/select";
+
 // split
 @import "./components/split/split";
 
@@ -18,6 +21,9 @@
 
   // action-btns
   @include fs-component--action-btns($prefix);
+
+  // select
+  @include fs-component--select($prefix);
 
   // split
   @include fs-component--split($prefix);
