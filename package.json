@@ -1,6 +1,6 @@
 {
   "name": "react-fs-components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "react components i use quite often in my projects",
   "main": "dist/react-fs-components.js",
   "repository": "https://github.com/florianstahr/react-fs-components.git",
