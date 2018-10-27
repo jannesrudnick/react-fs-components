@@ -2,6 +2,9 @@
 // action-btns
 @import "./components/action-btns/action-btns";
 
+// divider
+@import "./components/divider/divider";
+
 // input
 @import "./components/input/input";
 
@@ -27,6 +30,9 @@
 
   // action-btns
   @include fs-component--action-btns($prefix);
+
+  // divider
+  @include fs-component--divider($prefix);
 
   // input
   @include fs-component--input($prefix);
