@@ -45,6 +45,14 @@ But you can also include styles just for the components you need. But be sure to
 *See props for each component in the file it is defined in.*
 
 - [FS_ActionBtns](https://github.com/florianstahr/react-fs-components/blob/master/src/components/action-btns/action-btns.component.jsx)
+- [FS_Divider](https://github.com/florianstahr/react-fs-components/blob/master/src/components/divider/divider.component.jsx)
+- [FS_Input](https://github.com/florianstahr/react-fs-components/blob/master/src/components/input/input.component.jsx)
+- [FS_Modal](https://github.com/florianstahr/react-fs-components/blob/master/src/components/modal/modal.component.jsx)
+- [FS_Select](https://github.com/florianstahr/react-fs-components/blob/master/src/components/select/select.component.jsx)
+- [FS_SimpleDialog](https://github.com/florianstahr/react-fs-components/blob/master/src/components/simple-dialog/simple-dialog.component.jsx)
+- [FS_Split](https://github.com/florianstahr/react-fs-components/blob/master/src/components/split/split.component.jsx)
+- [FS_Switch](https://github.com/florianstahr/react-fs-components/blob/master/src/components/switch/switch.component.jsx)
+- [FS_Toggle](https://github.com/florianstahr/react-fs-components/blob/master/src/components/toggle/toggle.component.jsx)
 - [FS_Tooltip](https://github.com/florianstahr/react-fs-components/blob/master/src/components/tooltip/tooltip.component.jsx)
 
 ## Contributing
