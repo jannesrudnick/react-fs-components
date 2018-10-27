@@ -25,6 +25,13 @@ const ActionBtns = {
   },
 };
 
+const Modal = {
+  verticalAlign: {
+    START: 'start',
+    CENTER: 'center',
+  },
+};
+
 const Split = {
   direction: {
     HORIZONTAL: 'horizontal',
@@ -60,6 +67,7 @@ const Tooltip = {
 
 const FS_Constants = {
   ActionBtns,
+  Modal,
   Split,
   Switch,
   Tooltip,

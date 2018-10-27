@@ -12,6 +12,9 @@ import FS_Divider from './components/divider/divider.component';
 // input
 import FS_Input from './components/input/input.component';
 
+// modal
+import FS_Modal from './components/modal/modal.component';
+
 // select
 import FS_Select from './components/select/select.component';
 
@@ -40,6 +43,8 @@ export {
   FS_Divider,
 
   FS_Input,
+
+  FS_Modal,
 
   FS_Select,
 
