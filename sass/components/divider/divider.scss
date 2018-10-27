@@ -1,0 +1,23 @@
+@import "../../config";
+@import "../../_utils/flexbox";
+
+@mixin fs-component--divider($prefix) {
+
+  #{$prefix}divider {
+    padding: 8px 0;
+
+    #{$prefix}divider-inner {
+      height: 1px;
+      background-color: $fs__color__border__light;
+
+      &[data-divider-theme='accent'] {
+        background-color: $fs__color__accent__primary;
+      }
+
+      &[data-divider-theme='dark'] {
+        background-color: $fs__color__border__dark;
+      }
+    }
+  }
+
+}

@@ -25,8 +25,52 @@ const ActionBtns = {
   },
 };
 
+const Modal = {
+  verticalAlign: {
+    START: 'start',
+    CENTER: 'center',
+  },
+};
+
+const Split = {
+  direction: {
+    HORIZONTAL: 'horizontal',
+    VERTICAL: 'vertical',
+  },
+};
+
+const Switch = {
+  selectedType: {
+    ITEM_INDEX: 'number',
+    ITEM_VALUE: 'item_value',
+  },
+  size: {
+    DEFAULT: 'medium',
+    SMALL: 'small',
+    LARGE: 'large',
+  },
+};
+
+const Tooltip = {
+  position: {
+    TOP: 'top',
+    RIGHT: 'right',
+    BOTTOM: 'bottom',
+    LEFT: 'left',
+  },
+  size: {
+    SMALL: 'small',
+    REGULAR: 'regular',
+    BIG: 'big',
+  },
+};
+
 const FS_Constants = {
   ActionBtns,
+  Modal,
+  Split,
+  Switch,
+  Tooltip,
 };
 
 export default FS_Constants;

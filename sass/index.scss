@@ -2,6 +2,30 @@
 // action-btns
 @import "./components/action-btns/action-btns";
 
+// divider
+@import "./components/divider/divider";
+
+// input
+@import "./components/input/input";
+
+// modal
+@import "./components/modal/modal";
+
+// select
+@import "./components/select/select";
+
+// simple-dialog
+@import "./components/simple-dialog/simple-dialog";
+
+// split
+@import "./components/split/split";
+
+// switch
+@import "./components/switch/switch";
+
+// toggle
+@import "./components/toggle/toggle";
+
 // tooltip
 @import "./components/tooltip/tooltip";
 
@@ -9,6 +33,30 @@
 
   // action-btns
   @include fs-component--action-btns($prefix);
+
+  // divider
+  @include fs-component--divider($prefix);
+
+  // input
+  @include fs-component--input($prefix);
+
+  // modal
+  @include fs-component--modal($prefix);
+
+  // select
+  @include fs-component--select($prefix);
+
+  // simple-dialog
+  @include fs-component--simple-dialog($prefix);
+
+  // split
+  @include fs-component--split($prefix);
+
+  // switch
+  @include fs-component--switch($prefix);
+
+  // toggle
+  @include fs-component--toggle($prefix);
 
   // tooltip
   @include fs-component--tooltip;

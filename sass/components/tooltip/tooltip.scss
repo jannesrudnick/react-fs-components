@@ -1,5 +1,7 @@
 @import "../../includes/tooltip/tooltip";
 
 @mixin fs-component--tooltip() {
+
   @include fs-components--includes--react-tippy;
+
 }
