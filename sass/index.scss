@@ -2,6 +2,9 @@
 // action-btns
 @import "./components/action-btns/action-btns";
 
+// input
+@import "./components/input/input";
+
 // select
 @import "./components/select/select";
 
@@ -24,6 +27,9 @@
 
   // action-btns
   @include fs-component--action-btns($prefix);
+
+  // input
+  @include fs-component--input($prefix);
 
   // select
   @include fs-component--select($prefix);

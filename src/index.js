@@ -6,6 +6,9 @@ import FS_ActionBtns from './components/action-btns/action-btns.component';
 import FS_ActionBtnsGroup from './components/action-btns/action-btns-group.component';
 import FS_ActionBtn from './components/action-btns/action-btn.component';
 
+// input
+import FS_Input from './components/input/input.component';
+
 // select
 import FS_Select from './components/select/select.component';
 
@@ -30,6 +33,8 @@ export {
   FS_ActionBtns,
   FS_ActionBtnsGroup,
   FS_ActionBtn,
+
+  FS_Input,
 
   FS_Select,
 
