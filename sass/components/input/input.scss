@@ -1,0 +1,80 @@
+@import "../../config";
+@import "../../_utils/flexbox";
+
+@mixin fs-component--input($prefix) {
+
+  #{$prefix}input--wrapper {
+    padding: 4px 0 8px;
+    position: relative;
+    &#{$prefix}input-inline {
+      padding: 4px 0;
+    }
+    &:before {
+      content: attr(data-title) '';
+      text-transform: initial;
+      position: absolute;
+      bottom: 4px;
+      left: 6px;
+      color: $fs__color__border__dark;
+      font-size: 11px;
+      line-height: 11px;
+      background-color: $fs__color__background__primary;
+      padding: 0 2px;
+    }
+
+    #{$prefix}input {
+      border: 0 solid $fs__color__border__light;
+      border-bottom-width: 2px;
+      // border-radius: 3px;
+      min-height: 22px;
+      max-width: calc(100% - 16px);
+      font-size: 12.5px;
+      font-weight: 300;
+      outline: none;
+      @include flex(1);
+      width: 100%;
+      padding: 4px 8px;
+      margin: 0;
+
+      &::placeholder {
+        color: lighten($fs__color__text_light, 4);
+      }
+
+      &#{$prefix}input--validation-indicator {
+        padding-right: 16px;
+      }
+
+    }
+
+    #{$prefix}input--validation-indicator {
+      position: absolute;
+      right: 0;
+      bottom: 12px;
+
+      &#{$prefix}input--valid {
+        color: $fs__color__valid;
+      }
+      &#{$prefix}input--invalid {
+        color: $fs__color__invalid;
+      }
+    }
+
+    &#{$prefix}input--inline {
+      #{$prefix}input--validation-indicator {
+        bottom: 8px;
+      }
+    }
+
+    &#{$prefix}input--focus {
+      &:before {
+        color: $fs__color__accent__primary;
+      }
+
+      #{$prefix}input {
+        border-color: $fs__color__accent__primary;
+      }
+    }
+
+  }
+
+}

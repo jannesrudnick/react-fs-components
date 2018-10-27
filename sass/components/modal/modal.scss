@@ -1,0 +1,42 @@
+@import "../../config";
+@import "../../_utils/flexbox";
+
+@mixin fs-component--modal($prefix) {
+
+  #{$prefix}modal--overlay {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $fs__color__overlay__dark;
+  }
+  #{$prefix}modal--content-wrapper {
+    position: fixed;
+    z-index: 11000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 16px;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(flex-start);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    &[data-align-items='center'] {
+      @include align-items(center);
+    }
+
+    #{$prefix}modal--dialog {
+      background-color: $fs__color__background__primary;
+      min-height: 200px;
+      min-width: 200px;
+      box-shadow: 0 12px 15px 0 $fs__color__overlay__dark;
+      border-radius: 4px;
+    }
+  }
+
+}

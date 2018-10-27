@@ -1,0 +1,53 @@
+@import "../../config";
+@import "../../_utils/flexbox";
+
+@mixin fs-component--simple-dialog($prefix) {
+
+  #{$prefix}simple-dialog--background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 10000;
+    overflow-y: auto;
+  }
+  #{$prefix}simple-dialog--dialog-wrapper {
+    padding: 60px 16px;
+  }
+  #{$prefix}simple-dialog--dialog {
+    background-color: $fs__color__background__primary;
+    @include flexbox;
+    @include flex-direction(column);
+    border-radius: 4px;
+    margin: auto;
+
+    #{$prefix}simple-dialog--dialog--header {
+      background-color: $fs__color__accent__primary;
+      color: $fs__color__background__primary;
+      @include flexbox;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      padding: 8px;
+    }
+
+    #{$prefix}simple-dialog--dialog--header-inner {
+      @include flex(1);
+    }
+
+    #{$prefix}simple-dialog--dialog--title {
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    #{$prefix}simple-dialog--dialog--description {
+
+    }
+
+    #{$prefix}simple-dialog--dialog--body {
+      @include flex(1);
+    }
+  }
+
+}

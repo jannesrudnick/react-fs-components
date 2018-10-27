@@ -19,3 +19,7 @@ yarn-error.log*
 
 # vscode
 .vscode/
+
+# yalc
+.yalc/
+yalc.lock

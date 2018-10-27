@@ -1,0 +1,208 @@
+@import "../../config";
+@import "../../_utils/flexbox";
+
+@mixin fs-component--select($prefix) {
+
+  #{$prefix}react-select-container {
+    position: relative;
+    max-width: 100%;
+    padding: 4px 0 8px;
+    box-sizing: border-box;
+
+    #{$prefix}react-select__control {
+      display: flex;
+      max-width: 100%;
+      background-color: $fs__color__background__primary;
+      border: 2px solid $fs__color__border__light;
+      color: $fs__color__text_primary;
+      cursor: default;
+      border-spacing: 0;
+      outline: none;
+      overflow: hidden;
+      position: relative;
+
+      transition: border-color 400ms ease-in-out;
+
+      &:hover, &#{$prefix}react-select__control--is-focused {
+        border-color: $fs__color__border__light;
+        box-shadow: none;
+      }
+
+      &:active {
+        border-color: $fs__color__accent__primary;
+      }
+
+      &[data-menu-is-open='true'] {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        #{$prefix}react-select__dropdown-indicator {
+          color: $fs__color__accent__primary;
+        }
+      }
+    }
+
+    #{$prefix}react-select__value-container {
+
+      &#{$prefix}react-select__value-container--has-value {
+
+      }
+
+      &#{$prefix}react-select__single-value {
+        padding: 8px 52px 8px 10px;
+        position: absolute;
+      }
+
+      > div { // input wrapper
+        max-width: 100%;
+        vertical-align: middle;
+      }
+
+      > div > input, > div .fs--react-select__input > input {
+        max-width: 100%;
+        background: none transparent;
+        border: 0 none;
+        box-shadow: none;
+        cursor: default;
+        display: inline-block;
+        font-family: inherit;
+        font-size: inherit;
+        margin: 0;
+        outline: none;
+        padding: 8px 0;
+        -webkit-appearance: none;
+      }
+
+      > div > div {
+
+      }
+
+    }
+
+    #{$prefix}react-select__indicators {
+
+      #{$prefix}react-select__indicator-separator {
+        width: 2px;
+        background-color: $fs__color__border__light;
+
+      }
+
+      #{$prefix}react-select__indicator {
+        &#{$prefix}react-select__dropdown-indicator {
+          cursor: pointer;
+        }
+      }
+    }
+
+    #{$prefix}react-select__menu {
+      margin: 0;
+      top: calc(100% - 8px);
+      position: absolute;
+      border: 2px solid $fs__color__border__light;
+      border-top-width: 0;
+      box-shadow: rgba(0, 0, 0, 0.08) 0 0 0 0, rgba(0, 0, 0, 0.1) 0 4px 11px;
+      border-radius: 0 0 4px 4px;
+
+      #{$prefix}react-select__menu-list {
+        border-radius: 0;
+        padding: 0;
+        border: none;
+      }
+
+    }
+
+    #{$prefix}react-select__menu-list-item {
+      box-sizing: border-box;
+      position: relative;
+      background-color: $fs__color__background__primary;
+      color: $fs__color__text_primary;
+      cursor: pointer;
+      display: block;
+      padding: 8px 10px;
+      max-width: 100%;
+      &:last-child {
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        // border-bottom-width: 2px;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $fs__color__border__light;
+      }
+
+      &:before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 4px;
+      }
+
+      &:hover:before {
+        background-color: lighten($fs__color__accent__primary, 8);
+      }
+
+      &[data-is-selected='true']:before {
+        background-color: $fs__color__accent__primary;
+      }
+
+      &[data-is-selected='true']:last-child:before {
+        border-bottom-left-radius: 2px;
+      }
+
+      &#{$prefix}react-select__menu-list-item--has-description {
+        #{$prefix}react-select__menu-list-item--heading {
+          &:after {
+            position: absolute;
+            content: ' ';
+            height: 1px;
+            left: 8px;
+            right: -8px;
+            background-color: $fs__color__border__light;
+            bottom: 0;
+          }
+        }
+      }
+      #{$prefix}react-select__menu-list-item--heading {
+        position: relative;
+        padding-bottom: 4px;
+        font-family: monospace;
+        word-wrap: break-word;
+        min-height: 11px;
+      }
+      #{$prefix}react-select__menu-list-item--description {
+        padding: 4px 4px 0 8px;
+        font-size: 12px;
+        font-weight: 300;
+        word-wrap: break-word;
+      }
+    }
+
+    #{$prefix}react-select__multi-value {
+      background-color: $fs__color__background__primary;
+      border: 1px solid $fs__color__accent__primary;
+      border-radius: 2px;
+
+      #{$prefix}react-select__multi-value__label {
+        padding: 2px 5px;
+        color: $fs__color__accent__primary;
+      }
+
+      #{$prefix}react-select__multi-value__remove {
+        color: $fs__color__accent__primary;
+        background-color: $fs__color__background__primary;
+        border-left: 1px solid $fs__color__accent__primary;
+        border-radius: 0 1px 1px 0;
+        cursor: pointer;
+
+        &:hover, &:active {
+          background-color: $fs__color__accent__primary;
+          color: $fs__color__background__primary;
+        }
+      }
+    }
+  }
+
+}
+
