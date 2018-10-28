@@ -1,0 +1,74 @@
+
+@import "../../config";
+@import "../../_utils/flexbox";
+
+@import "../../includes/rte-tinymce/rte-tinymce";
+
+@mixin fs-component--rte-tinymce($prefix) {
+
+  #{$prefix}rte-tinymce--wrapper {
+    @include fs-components--includes--rte-tinymce;
+
+    .mce-tinymce {
+      .mce-top-part::before {
+        content: none;
+      }
+
+      box-shadow: none;
+      border: none!important;
+
+      .mce-toolbar-grp {
+        background-color: $fs__color__background__primary;
+
+        .mce-container-body {
+          @include flexbox;
+          @include flex-wrap(wrap);
+        }
+      }
+
+      .mce-panel {
+        border: none!important;
+      }
+
+      .mce-btn-group {
+        border-width: 0;
+        padding: 0;
+
+        > div {
+          @include flexbox;
+          @include flex-wrap(wrap);
+        }
+      }
+
+      .mce-toolbar .mce-btn-group .mce-btn {
+        border-color: transparent;
+        background-color: transparent;
+        box-shadow: none;
+        color: $fs__color__text_light;
+
+        &.mce-disabled, &.mce-disabled:hover, &.mce-active:hover {
+          border-color: transparent;
+        }
+
+        button, .mce-ico {
+          color: inherit;
+        }
+
+        &.mce-active, &:hover {
+          color: $fs__color__accent__primary;
+        }
+      }
+
+      .mce-edit-area {
+        border: 1px solid $fs__color__border__light !important;
+        border-radius: 4px;
+      }
+
+    }
+
+    &[data-has-focus='true'] .mce-edit-area {
+      border-color: $fs__color__accent__primary!important;
+    }
+  }
+
+}

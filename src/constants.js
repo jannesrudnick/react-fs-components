@@ -25,6 +25,18 @@ const ActionBtns = {
   },
 };
 
+const Badge = {
+  type: {
+    DEFAULT: 'default',
+    SUCCESS: 'success',
+    ERROR: 'error',
+  },
+  size: {
+    DEFAULT: 'md',
+    SMALL: 'sm',
+  },
+};
+
 const Modal = {
   verticalAlign: {
     START: 'start',
@@ -67,6 +79,7 @@ const Tooltip = {
 
 const FS_Constants = {
   ActionBtns,
+  Badge,
   Modal,
   Split,
   Switch,

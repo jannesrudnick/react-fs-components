@@ -1,0 +1,56 @@
+@import "../../config";
+@import "../../_utils/flexbox";
+
+@mixin fs-component--badge($prefix) {
+
+  #{$prefix}badge {
+
+    padding: 4px 4px 4px 0;
+    display: inline-block;
+
+    &[data-size='sm'] {
+      font-size: 0.8em;
+    }
+
+    #{$prefix}badge--content-wrapper {
+      border-radius: 4px;
+      font-weight: 300;
+      @include flexbox;
+      background-color: $fs__color__accent__primary;
+      color: $fs__color__background__primary;
+
+      #{$prefix}badge--icon {
+        margin: 2px;
+        background-color: $fs__color__background__primary;
+        color: $fs__color__accent__primary;
+        border-radius: 3px;
+        border: 2px solid transparent;
+        padding: 2px;
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
+        font-size: 0.95em;
+      }
+
+      &[data-badge-type='success'] {
+        background-color: $fs__color__valid;
+        #{$prefix}badge--icon {
+          color: $fs__color__valid;
+        }
+      }
+
+      &[data-badge-type='error'] {
+        background-color: $fs__color__invalid;
+        #{$prefix}badge--icon {
+          color: $fs__color__invalid;
+        }
+      }
+
+      #{$prefix}badge--text {
+        padding: 2px 4px 2px 4px;
+      }
+    }
+
+  }
+
+}
