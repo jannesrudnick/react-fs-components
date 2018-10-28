@@ -1,7 +1,7 @@
 @import "../../config";
 @import "../../_utils/flexbox";
 
-@mixin fs-components--datetime($prefix) {
+@mixin fs-component--datetime($prefix) {
 
   /*!
  * https://github.com/YouCanBookMe/react-datetime

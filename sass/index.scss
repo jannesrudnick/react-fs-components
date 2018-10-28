@@ -11,6 +11,9 @@
 // input
 @import "./components/input/input";
 
+// markdown
+@import "./components/markdown/markdown";
+
 // modal
 @import "./components/modal/modal";
 
@@ -38,13 +41,16 @@
   @include fs-component--action-btns($prefix);
 
   // datetime
-  @include fs-components--datetime($prefix);
+  @include fs-component--datetime($prefix);
 
   // divider
   @include fs-component--divider($prefix);
 
   // input
   @include fs-component--input($prefix);
+
+  // markdown
+  @include fs-component--markdown($prefix);
 
   // modal
   @include fs-component--modal($prefix);

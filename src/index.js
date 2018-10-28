@@ -15,6 +15,9 @@ import FS_Divider from './components/divider/divider.component';
 // input
 import FS_Input from './components/input/input.component';
 
+// markdown
+import FS_Markdown from './components/markdown/markdown.component';
+
 // modal
 import FS_Modal from './components/modal/modal.component';
 
@@ -48,6 +51,8 @@ export {
   FS_Divider,
 
   FS_Input,
+
+  FS_Markdown,
 
   FS_Modal,
 
