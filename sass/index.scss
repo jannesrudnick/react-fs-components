@@ -2,6 +2,9 @@
 // action-btns
 @import "./components/action-btns/action-btns";
 
+// datetime
+@import "./components/datetime/datetime";
+
 // divider
 @import "./components/divider/divider";
 
@@ -33,6 +36,9 @@
 
   // action-btns
   @include fs-component--action-btns($prefix);
+
+  // datetime
+  @include fs-components--datetime($prefix);
 
   // divider
   @include fs-component--divider($prefix);

@@ -6,6 +6,9 @@ import FS_ActionBtns from './components/action-btns/action-btns.component';
 import FS_ActionBtnsGroup from './components/action-btns/action-btns-group.component';
 import FS_ActionBtn from './components/action-btns/action-btn.component';
 
+// datetime
+import FS_DateTime from './components/datetime/datetime.component';
+
 // divider
 import FS_Divider from './components/divider/divider.component';
 
@@ -39,6 +42,8 @@ export {
   FS_ActionBtns,
   FS_ActionBtnsGroup,
   FS_ActionBtn,
+
+  FS_DateTime,
 
   FS_Divider,
 
