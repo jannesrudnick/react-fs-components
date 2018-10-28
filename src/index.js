@@ -6,6 +6,9 @@ import FS_ActionBtns from './components/action-btns/action-btns.component';
 import FS_ActionBtnsGroup from './components/action-btns/action-btns-group.component';
 import FS_ActionBtn from './components/action-btns/action-btn.component';
 
+// badge
+import FS_Badge from './components/badge/badge.component';
+
 // datetime
 import FS_DateTime from './components/datetime/datetime.component';
 
@@ -48,6 +51,8 @@ export {
   FS_ActionBtns,
   FS_ActionBtnsGroup,
   FS_ActionBtn,
+
+  FS_Badge,
 
   FS_DateTime,
 

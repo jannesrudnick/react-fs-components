@@ -2,6 +2,9 @@
 // action-btns
 @import "./components/action-btns/action-btns";
 
+// badge
+@import "./components/badge/badge";
+
 // datetime
 @import "./components/datetime/datetime";
 
@@ -42,6 +45,9 @@
 
   // action-btns
   @include fs-component--action-btns($prefix);
+
+  // badge
+  @include fs-component--badge($prefix);
 
   // datetime
   @include fs-component--datetime($prefix);
