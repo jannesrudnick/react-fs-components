@@ -17,6 +17,9 @@
 // modal
 @import "./components/modal/modal";
 
+// rte-tinymce
+@import "./components/rte-tinymce/rte-tinymce";
+
 // select
 @import "./components/select/select";
 
@@ -54,6 +57,9 @@
 
   // modal
   @include fs-component--modal($prefix);
+
+  // rte-tinymce
+  @include fs-component--rte-tinymce($prefix);
 
   // select
   @include fs-component--select($prefix);

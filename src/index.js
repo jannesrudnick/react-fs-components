@@ -21,6 +21,9 @@ import FS_Markdown from './components/markdown/markdown.component';
 // modal
 import FS_Modal from './components/modal/modal.component';
 
+// rte-tinymce
+import FS_RTE_TinyMCE from './components/rte-tinymce/rte-tinymce.component';
+
 // select
 import FS_Select from './components/select/select.component';
 
@@ -55,6 +58,8 @@ export {
   FS_Markdown,
 
   FS_Modal,
+
+  FS_RTE_TinyMCE,
 
   FS_Select,
 

@@ -1,0 +1,3064 @@
+@mixin fs-components--includes--rte-tinymce() {
+  //colors
+  $color_chicago_approx: #595959;
+  $black_20: rgba(0, 0, 0, 0.2);
+  $white: #fff;
+  $color_pumice_approx: #c5c5c5;
+  $color_jordy_blue_approx: #91bbe9;
+  $color_tropical_blue_approx: #bdd6f2;
+  $color_stack_approx: #8b8b8b;
+  $color_mariner_approx: #2276d2;
+  $alabaster: #fafafa;
+  $color_bon_jour_approx: #e1e1e1;
+  $black: black;
+  $color_scarpa_flow_approx: #555c66;
+  $color_suva_gray_approx: #888;
+  $color_fuscous_gray_60_approx: rgba(85, 85, 85, 0.6);
+  $color_silver_chalice_approx: #aaa;
+  $color_concrete_approx: #f3f3f3;
+  $black_25: rgba(0, 0, 0, 0.25);
+  $black_30: rgba(0, 0, 0, 0.3);
+  $color_star_dust_approx: #9b9b9b;
+  $color_silver_approx: #bdbdbd;
+  $color_mercury_approx: #e2e4e7;
+  $color_celeste_approx: #ccc;
+  $color_willow_brook_approx: #dff0d8;
+  $color_beryl_green_approx: #d6e9c6;
+  $color_link_water_approx: #d9edf7;
+  $color_glacier_approx: #779ecb;
+  $color_solitaire_approx: #fcf8e3;
+  $color_champagne_approx: #faebcc;
+  $color_vanilla_ice_approx: #f2dede;
+  $color_oyster_pink_approx: #ebccd1;
+  $color_calypso_approx: #31708f;
+  $color_killarney_approx: #3c763d;
+  $color_pesto_approx: #8a6d3b;
+  $color_apple_blossom_approx: #a94442;
+  $color_nobel_approx: #b3b3b3;
+  $white_75: rgba(255, 255, 255, 0.75);
+  $color_french_gray_approx: #b5bcc2;
+  $color_denim_approx: #1e6abc;
+  $color_alto_approx: #d9d9d9;
+  $color_tussock_approx: #c09853;
+  $color_hippie_green_approx: #468847;
+  $gray: gray;
+  $red:  red;
+  $color_chestnut_approx: #b94a48;
+  $color_gallery_approx: #ededee;
+  $color_salem_approx: #093;
+  $black_10: rgba(0, 0, 0, 0.1);
+  $color_ghost_approx: #c5c9cf;
+  $color_romance_approx: #fdfdfd;
+  $color_pink_swan_approx: #bbb;
+
+  //fonts
+  $font_0: tinymce;
+  $font_1: tinymce-small;
+  $font_2: Helvetica Neue;
+  $font_3: Helvetica;
+  $font_4: Arial;
+  $font_5: sans-serif;
+  $font_6: Courier New;
+  $font_7: Courier;
+  $font_8: monospace;
+
+  //data-uris
+  $data_uri_0: "data:image/gif;base64,R0lGODdhDAAMAIABAMzMzP///ywAAAAADAAMAAACFoQfqYeabNyDMkBQb81Uat85nxguUAEAOw==";
+
+  //urls
+  $url_0: none; // url(img/loader.gif);
+  $url_1: url(../../inc/fonts/tinymce.eot);
+  $url_2: url(../../inc/fonts/tinymce.eot?#iefix);
+  $url_3: url(../../inc/fonts/tinymce.woff);
+  $url_4: url(../../inc/fonts/tinymce.ttf);
+  $url_5: url(../../inc/fonts/tinymce.svg#tinymce);
+  $url_6: url(../../inc/fonts/tinymce-small.eot);
+  $url_7: url(../../inc/fonts/tinymce-small.eot?#iefix);
+  $url_8: url(../../inc/fonts/tinymce-small.woff);
+  $url_9: url(../../inc/fonts/tinymce-small.ttf);
+  $url_10: url(../../inc/fonts/tinymce-small.svg#tinymce);
+
+  //@extend-elements
+  //original selectors
+  //.mce-container, .mce-container *, .mce-widget, .mce-widget *, .mce-reset
+  %extend_1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: top;
+    background: transparent;
+    text-decoration: none;
+    color: $color_chicago_approx;
+    font-family: $font_2, $font_3, $font_4, $font_5;
+    font-size: 14px;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+    float: none;
+    position: static;
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+    cursor: inherit;
+    -webkit-tap-highlight-color: transparent;
+    line-height: normal;
+    font-weight: normal;
+    text-align: left;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: content-box;
+    direction: ltr;
+    max-width: none;
+  }
+
+  //original selectors
+  //.mce-arrow:before, .mce-arrow:after
+  %extend_2 {
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    content: "";
+  }
+
+  //original selectors
+  //.mce-scrollbar:hover, .mce-scrollbar.mce-active
+  %extend_3 {
+    background-color: $color_silver_chalice_approx;
+    opacity: .6;
+    filter: alpha(opacity=60);
+    zoom: 1;
+  }
+
+  //original selectors
+  //.mce-floatpanel .mce-arrow, .mce-floatpanel .mce-arrow:after
+  %extend_4 {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+  }
+
+  //original selectors
+  //.mce-btn:hover, .mce-btn:active
+  %extend_5 {
+    background: $white;
+    color: $color_chicago_approx;
+    border-color: $color_mercury_approx;
+  }
+
+  //original selectors
+  //.mce-btn.mce-disabled button, .mce-btn.mce-disabled:hover button
+  %extend_6 {
+    cursor: default;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    opacity: .4;
+    filter: alpha(opacity=40);
+    zoom: 1;
+  }
+
+  //original selectors
+  //.mce-btn.mce-active, .mce-btn.mce-active:hover, .mce-btn.mce-active:focus, .mce-btn.mce-active:active
+  %extend_7 {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    background: $color_scarpa_flow_approx;
+    color: $white;
+    border-color: transparent;
+  }
+
+  //original selectors
+  //.mce-primary.mce-disabled button, .mce-primary.mce-disabled:hover button
+  %extend_8 {
+    cursor: default;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    opacity: .4;
+    filter: alpha(opacity=40);
+    zoom: 1;
+  }
+
+  //original selectors
+  //.mce-primary.mce-active, .mce-primary.mce-active:hover, .mce-primary:not(.mce-disabled):active
+  %extend_9 {
+    background-color: $color_denim_approx;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+  }
+
+  //original selectors
+  //.mce-btn-flat:hover, .mce-btn-flat.mce-active, .mce-btn-flat:focus, .mce-btn-flat:active
+  %extend_10 {
+    border: 0;
+    background: $color_mercury_approx;
+    filter: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+  }
+
+  //original selectors
+  //.mce-checkbox:focus i.mce-i-checkbox, .mce-checkbox.mce-focus i.mce-i-checkbox
+  %extend_11 {
+    border: 1px solid $color_mariner_approx;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+  }
+
+  //original selectors
+  //.mce-colorpicker-overlay1, .mce-colorpicker-overlay2
+  %extend_12 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  //original selectors
+  //.mce-menubar .mce-menubtn:hover, .mce-menubar .mce-menubtn.mce-active, .mce-menubar .mce-menubtn:focus
+  %extend_13 {
+    border-color: $color_mercury_approx;
+    background: $white;
+    filter: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+  }
+
+  //original selectors
+  //div.mce-menu .mce-menu-item-sep, .mce-menu-item-sep:hover
+  %extend_14 {
+    border: 0;
+    padding: 0;
+    height: 1px;
+    margin: 9px 1px;
+    overflow: hidden;
+    background: transparent;
+    border-bottom: 1px solid $black_10;
+    cursor: default;
+    filter: none;
+  }
+
+  //original selectors
+  //.mce-textbox:focus, .mce-textbox.mce-focus
+  %extend_15 {
+    border-color: $color_mariner_approx;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+  }
+
+
+  .mce-container {
+    @extend %extend_1;
+    display: block;
+    * {
+      @extend %extend_1;
+    }
+    *[unselectable] {
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -o-user-select: none;
+      //Instead of the line below you could use @include user-select($select)
+      user-select: none;
+    }
+    b {
+      font-weight: bold;
+    }
+    p {
+      margin-bottom: 5px;
+    }
+    a {
+      cursor: pointer;
+      color: $color_mariner_approx;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    ul {
+      margin-left: 15px;
+    }
+    .mce-table-striped {
+      border-collapse: collapse;
+      margin: 10px;
+      td {
+        padding: 5px;
+      }
+      th {
+        padding: 5px;
+      }
+      thead > tr {
+        background-color: $alabaster;
+        th {
+          font-weight: bold;
+        }
+      }
+      tr:nth-child(even) {
+        background-color: $alabaster;
+      }
+      tbody > tr:hover {
+        background-color: $color_bon_jour_approx;
+      }
+    }
+  }
+  .mce-widget {
+    @extend %extend_1;
+    * {
+      @extend %extend_1;
+    }
+    button {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      //Instead of the line below you could use @include box-sizing($bs)
+      box-sizing: border-box;
+    }
+  }
+  .mce-reset {
+    @extend %extend_1;
+  }
+  .word-wrap {
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    //Instead of the line below you could use @include word-break($value)
+    word-break: break-all;
+    //Instead of the line below you could use @include word-break($value)
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    //Instead of the line below you could use @include hyphens($value)
+    hyphens: auto;
+  }
+  .mce-fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: opacity .15s linear;
+    &.mce-in {
+      opacity: 1;
+    }
+  }
+  .mce-tinymce {
+    visibility: inherit !important;
+    position: relative;
+    display: block;
+    -webkit-box-shadow: 0 1px 2px $black_20;
+    -moz-box-shadow: 0 1px 2px $black_20;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 1px 2px $black_20;
+  }
+  .mce-fullscreen {
+    z-index: 100;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+    .mce-resizehandle {
+      display: none;
+    }
+  }
+  div {
+    &.mce-fullscreen {
+      width: 100%;
+      height: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    &.mce-edit-area {
+      background: $white;
+      filter: none;
+    }
+    &.mce-tinymce-inline {
+      width: 100%;
+    }
+    &.mce-menu {
+      .mce-menu-item-sep {
+        @extend %extend_14;
+      }
+      .mce-menu-item b {
+        font-weight: bold;
+      }
+    }
+    &.mce-menubtn.mce-opened {
+      border-bottom-color: $white;
+      z-index: 65537;
+    }
+  }
+  .mce-statusbar {
+    position: relative;
+    .mce-container-body {
+      position: relative;
+      font-size: 11px;
+    }
+    .mce-flow-layout-item {
+      margin: 0;
+    }
+    > .mce-container-body {
+      display: flex;
+      padding-right: 16px;
+      .mce-path {
+        flex: 1;
+      }
+    }
+  }
+  .mce-wordcount {
+    font-size: inherit;
+    text-transform: uppercase;
+    padding: 8px 0;
+  }
+  .mce-charmap {
+    border-collapse: collapse;
+    td {
+      cursor: default;
+      border: 1px solid $color_pumice_approx;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      vertical-align: middle;
+      padding: 2px;
+      div {
+        text-align: center;
+      }
+      &:hover {
+        background: $white;
+      }
+    }
+  }
+  .mce-grid {
+    border-spacing: 2px;
+    border-collapse: separate;
+    a {
+      display: block;
+      border: 1px solid transparent;
+      &:hover {
+        border-color: $color_jordy_blue_approx;
+      }
+      &:focus {
+        border-color: $color_jordy_blue_approx;
+      }
+    }
+    td.mce-grid-cell {
+      div {
+        border: 1px solid $color_pumice_approx;
+        width: 15px;
+        height: 15px;
+        margin: 0;
+        cursor: pointer;
+        &:focus {
+          border-color: $color_jordy_blue_approx;
+        }
+      }
+      div[disabled] {
+        cursor: not-allowed;
+      }
+    }
+  }
+  .mce-grid-border {
+    margin: 0 4px;
+    a {
+      border-color: $color_pumice_approx;
+      width: 13px;
+      height: 13px;
+      &:hover {
+        border-color: $color_jordy_blue_approx;
+        background: $color_tropical_blue_approx;
+      }
+      &.mce-active {
+        border-color: $color_jordy_blue_approx;
+        background: $color_tropical_blue_approx;
+      }
+    }
+  }
+  .mce-text-center {
+    text-align: center;
+  }
+  .mce-monospace {
+    font-family: $font_6, $font_7, $font_8;
+  }
+  .mce-branding {
+    font-size: inherit;
+    text-transform: uppercase;
+    white-space: pre;
+    padding: 8px 0;
+    a {
+      font-size: inherit;
+      color: inherit;
+    }
+  }
+  .mce-top-part {
+    position: relative;
+  }
+  .mce-top-part::before {
+    content: '';
+    position: absolute;
+    -webkit-box-shadow: 0 1px 2px $black_20;
+    -moz-box-shadow: 0 1px 2px $black_20;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 1px 2px $black_20;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  .mce-rtl {
+    .mce-wordcount {
+      left: 0;
+      right: auto;
+    }
+    .mce-path {
+      text-align: right;
+      padding-right: 16px;
+      direction: rtl;
+    }
+    .mce-window-head {
+      .mce-close {
+        position: absolute;
+        right: auto;
+        left: 0;
+      }
+      .mce-dragh {
+        left: auto;
+        right: 0;
+      }
+      .mce-title {
+        direction: rtl;
+        text-align: right;
+        padding-right: 0;
+        padding-left: 20px;
+      }
+    }
+    .mce-btn-group {
+      .mce-btn {
+        margin-left: 0;
+        margin-right: 2px;
+      }
+      .mce-first {
+        margin-right: 0;
+      }
+      &:not(:first-child) {
+        border-left: none;
+        border-right: 1px solid $color_alto_approx;
+        padding-right: 4px;
+        margin-right: 4px;
+      }
+    }
+    .mce-checkbox {
+      direction: rtl;
+      text-align: right;
+    }
+    .mce-colorbutton {
+      direction: rtl;
+      .mce-preview {
+        margin-left: 0;
+        padding-right: 0;
+        padding-left: 3px;
+      }
+      .mce-open {
+        padding-left: 4px;
+        padding-right: 4px;
+        border-left: 0;
+      }
+      &.mce-btn-small .mce-preview {
+        margin-left: 0;
+        padding-right: 0;
+        padding-left: 2px;
+      }
+    }
+    .mce-flow-layout {
+      text-align: right;
+      direction: rtl;
+    }
+    .mce-flow-layout-item {
+      margin: 2px 2px 2px 0;
+      &.mce-last {
+        margin-left: 2px;
+      }
+    }
+    .mce-label {
+      text-align: right;
+      direction: rtl;
+    }
+    .mce-menubtn {
+      button {
+        direction: rtl;
+        text-align: right;
+      }
+      &.mce-fixed-width span {
+        direction: rtl;
+        text-align: right;
+      }
+    }
+    .mce-menu-item {
+      text-align: right;
+      direction: rtl;
+      padding: 6px 12px 6px 15px;
+      .mce-caret {
+        margin-left: 6px;
+        margin-right: 0;
+        border-right: 4px solid $color_chicago_approx;
+        border-left: 0;
+      }
+      .mce-ico {
+        padding-right: 0;
+        padding-left: 4px;
+      }
+      &.mce-selected .mce-caret {
+        border-left-color: transparent;
+        border-right-color: $color_chicago_approx;
+      }
+      &:focus .mce-caret {
+        border-left-color: transparent;
+        border-right-color: $color_chicago_approx;
+      }
+      &:hover .mce-caret {
+        border-left-color: transparent;
+        border-right-color: $color_chicago_approx;
+      }
+    }
+    .mce-menu-shortcut {
+      right: auto;
+      left: 0;
+    }
+    .mce-listbox {
+      .mce-caret {
+        right: auto;
+        left: 8px;
+      }
+      button {
+        padding-right: 10px;
+        padding-left: 20px;
+      }
+    }
+    .mce-splitbtn {
+      direction: rtl;
+      text-align: right;
+      button {
+        padding-right: 4px;
+        padding-left: 4px;
+      }
+      .mce-open {
+        border-left: 0;
+      }
+    }
+    .mce-tabs {
+      text-align: right;
+      direction: rtl;
+    }
+    .mce-tab {
+      border-width: 0 0 0 1px;
+    }
+    .mce-textbox {
+      text-align: right;
+      direction: rtl;
+    }
+    .mce-statusbar > .mce-container-body > *:last-child {
+      padding-right: 0;
+      padding-left: 10px;
+    }
+    .mce-btn button {
+      direction: rtl;
+    }
+    i.mce-i-checkbox {
+      margin: 0 0 0 3px;
+    }
+    .mce-infobox div {
+      text-align: right;
+      direction: rtl;
+    }
+    &.mce-menu-align .mce-caret {
+      right: auto;
+      left: 0;
+    }
+    .mce-filepicker input {
+      direction: ltr;
+    }
+  }
+  .mce-croprect-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .mce-croprect-handle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $white;
+    &:focus {
+      border-color: $color_mariner_approx;
+    }
+  }
+  .mce-croprect-handle-nw {
+    border-width: 2px 0 0 2px;
+    margin: -2px 0 0 -2px;
+    cursor: nw-resize;
+    top: 100px;
+    left: 100px;
+  }
+  .mce-croprect-handle-ne {
+    border-width: 2px 2px 0 0;
+    margin: -2px 0 0 -20px;
+    cursor: ne-resize;
+    top: 100px;
+    left: 200px;
+  }
+  .mce-croprect-handle-sw {
+    border-width: 0 0 2px 2px;
+    margin: -20px 2px 0 -2px;
+    cursor: sw-resize;
+    top: 200px;
+    left: 100px;
+  }
+  .mce-croprect-handle-se {
+    border-width: 0 2px 2px 0;
+    margin: -20px 0 0 -20px;
+    cursor: se-resize;
+    top: 200px;
+    left: 200px;
+  }
+  .mce-croprect-handle-move {
+    position: absolute;
+    cursor: move;
+    border: 0;
+    &:focus {
+      outline: 1px solid $color_mariner_approx;
+    }
+  }
+  .mce-croprect-block {
+    opacity: .5;
+    filter: alpha(opacity=50);
+    zoom: 1;
+    position: absolute;
+    background: $black;
+  }
+  .mce-imagepanel {
+    overflow: auto;
+    background: $black;
+    img {
+      position: absolute;
+    }
+  }
+  .mce-imagepanel-bg {
+    position: absolute;
+    background: url($data_uri_0);
+  }
+  .mce-arrow-up {
+    margin-top: 12px;
+  }
+  .mce-arrow-down {
+    margin-top: -12px;
+  }
+  .mce-arrow {
+    &:before {
+      @extend %extend_2;
+    }
+    &:after {
+      @extend %extend_2;
+    }
+    &.mce-arrow-up {
+      &:before {
+        top: -9px;
+        border-bottom-color: $color_pumice_approx;
+        border-width: 0 9px 9px;
+        margin-left: -9px;
+      }
+      &:after {
+        top: -8px;
+        border-bottom-color: $white;
+        border-width: 0 8px 8px;
+        margin-left: -8px;
+      }
+    }
+    &.mce-arrow-down {
+      &:before {
+        bottom: -9px;
+        border-top-color: $color_pumice_approx;
+        border-width: 9px 9px 0;
+        margin-left: -9px;
+      }
+      &:after {
+        bottom: -8px;
+        border-top-color: $white;
+        border-width: 8px 8px 0;
+        margin-left: -8px;
+      }
+    }
+    &.mce-arrow-left {
+      &:before {
+        margin: 0;
+        left: 8px;
+      }
+      &:after {
+        margin: 0;
+        left: 9px;
+      }
+    }
+    &.mce-arrow-right {
+      &:before {
+        left: auto;
+        margin: 0;
+        right: 8px;
+      }
+      &:after {
+        left: auto;
+        margin: 0;
+        right: 9px;
+      }
+    }
+    &.mce-arrow-center.mce-arrow {
+      &.mce-arrow-left {
+        margin-left: 12px;
+        &:before {
+          left: -9px;
+          top: 50%;
+          border-right-color: $color_pumice_approx;
+          border-width: 9px 9px 9px 0;
+          margin-top: -9px;
+        }
+        &:after {
+          left: -8px;
+          top: 50%;
+          border-right-color: $white;
+          border-width: 8px 8px 8px 0;
+          margin-top: -8px;
+        }
+      }
+      &.mce-arrow-right {
+        margin-left: -14px;
+        &:before {
+          right: -9px;
+          top: 50%;
+          border-left-color: $color_pumice_approx;
+          border-width: 9px 0 9px 9px;
+          margin-top: -9px;
+        }
+        &:after {
+          right: -8px;
+          top: 50%;
+          border-left-color: $white;
+          border-width: 8px 0 8px 8px;
+          margin-top: -8px;
+        }
+      }
+    }
+  }
+  .mce-sidebar-toolbar {
+    border: 0 solid $color_pumice_approx;
+    border-left-width: 1px;
+    .mce-btn {
+      border-left: 0;
+      border-right: 0;
+      &.mce-active {
+        background-color: $color_scarpa_flow_approx;
+        &:hover {
+          background-color: $color_scarpa_flow_approx;
+          button {
+            color: $white;
+            //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            text-shadow: 1px 1px none;
+            i {
+              color: $white;
+              //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+              text-shadow: 1px 1px none;
+            }
+          }
+        }
+        button {
+          color: $white;
+          //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+          text-shadow: 1px 1px none;
+          i {
+            color: $white;
+            //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            text-shadow: 1px 1px none;
+          }
+        }
+      }
+    }
+  }
+  .mce-sidebar-panel {
+    border: 0 solid $color_pumice_approx;
+    border-left-width: 1px;
+  }
+  .mce-container-body {
+    display: block;
+    &.mce-abs-layout {
+      overflow: hidden;
+    }
+    .mce-resizehandle {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 16px;
+      height: 16px;
+      visibility: visible;
+      cursor: s-resize;
+      margin: 0;
+    }
+    .mce-resizehandle-both {
+      cursor: se-resize;
+    }
+  }
+  .mce-autoscroll {
+    overflow: hidden;
+  }
+  .mce-scrollbar {
+    position: absolute;
+    width: 7px;
+    height: 100%;
+    top: 2px;
+    right: 2px;
+    opacity: .4;
+    filter: alpha(opacity=40);
+    zoom: 1;
+    &:hover {
+      @extend %extend_3;
+    }
+    &.mce-active {
+      @extend %extend_3;
+    }
+  }
+  .mce-scrollbar-h {
+    top: auto;
+    right: auto;
+    left: 2px;
+    bottom: 2px;
+    width: 100%;
+    height: 7px;
+    .mce-scrollbar-thumb {
+      width: 100%;
+      height: 5px;
+    }
+  }
+  .mce-scrollbar-thumb {
+    position: absolute;
+    background-color: $black;
+    border: 1px solid $color_suva_gray_approx;
+    border-color: $color_fuscous_gray_60_approx;
+    width: 5px;
+    height: 100%;
+  }
+  .mce-scroll {
+    position: relative;
+  }
+  .mce-panel {
+    border: 0 solid $color_concrete_approx;
+    border: 0 solid $color_pumice_approx;
+    background-color: $white;
+  }
+  .mce-floatpanel {
+    position: absolute;
+    -webkit-box-shadow: 0 1px 2px $black_20;
+    -moz-box-shadow: 0 1px 2px $black_20;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 1px 2px $black_20;
+    &.mce-fixed {
+      position: fixed;
+    }
+    .mce-arrow {
+      @extend %extend_4;
+      border-width: 11px;
+      &:after {
+        @extend %extend_4;
+        border-width: 10px;
+        content: "";
+      }
+    }
+    &.mce-popover {
+      filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+      background: transparent;
+      -webkit-box-shadow: 0 1px 2px $black_20;
+      -moz-box-shadow: 0 1px 2px $black_20;
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 1px 2px $black_20;
+      top: 0;
+      left: 0;
+      background: $white;
+      border: 1px solid $color_pumice_approx;
+      border: 1px solid $black_25;
+      &.mce-bottom {
+        margin-top: 10px;
+        *margin-top: 0;
+        &.mce-start {
+          margin-left: -22px;
+          > .mce-arrow {
+            left: 20px;
+          }
+        }
+        &.mce-end {
+          margin-left: 22px;
+          > .mce-arrow {
+            right: 10px;
+            left: auto;
+          }
+        }
+        > .mce-arrow {
+          left: 50%;
+          margin-left: -11px;
+          border-top-width: 0;
+          border-bottom-color: $color_pumice_approx;
+          border-bottom-color: $black_25;
+          top: -11px;
+          &:after {
+            top: 1px;
+            margin-left: -10px;
+            border-top-width: 0;
+            border-bottom-color: $white;
+          }
+        }
+      }
+      &.mce-top {
+        margin-top: -10px;
+        *margin-top: 0;
+        &.mce-start {
+          margin-left: -22px;
+          > .mce-arrow {
+            left: 20px;
+          }
+        }
+        &.mce-end {
+          margin-left: 22px;
+          > .mce-arrow {
+            right: 10px;
+            left: auto;
+          }
+        }
+        > .mce-arrow {
+          left: 50%;
+          margin-left: -11px;
+          border-bottom-width: 0;
+          border-top-color: $color_pumice_approx;
+          top: auto;
+          bottom: -11px;
+          &:after {
+            bottom: 1px;
+            margin-left: -10px;
+            border-bottom-width: 0;
+            border-top-color: $white;
+          }
+        }
+      }
+    }
+  }
+  #mce-modal-block {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    zoom: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    &.mce-in {
+      opacity: .5;
+      filter: alpha(opacity=50);
+      zoom: 1;
+    }
+  }
+  .mce-window-move {
+    cursor: move;
+  }
+  .mce-window {
+    -webkit-box-shadow: 0 3px 7px $black_30;
+    -moz-box-shadow: 0 3px 7px $black_30;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 3px 7px $black_30;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    background: transparent;
+    background: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: scale(.1);
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: transform 100ms ease-in, opacity 150ms ease-in;
+    &.mce-in {
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: scale(1);
+      opacity: 1;
+    }
+    .mce-container-body {
+      display: block;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+    .mce-btn {
+      &:hover {
+        border-color: $color_pumice_approx;
+      }
+      &:focus {
+        border-color: $color_mariner_approx;
+      }
+    }
+  }
+  .mce-window-head {
+    padding: 9px 15px;
+    border-bottom: 1px solid $color_pumice_approx;
+    position: relative;
+    .mce-close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 38px;
+      width: 38px;
+      text-align: center;
+      cursor: pointer;
+      i {
+        color: $color_star_dust_approx;
+      }
+    }
+    .mce-title {
+      line-height: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      text-rendering: optimizelegibility;
+      padding-right: 20px;
+    }
+    .mce-dragh {
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: move;
+      width: 90%;
+      height: 100%;
+    }
+  }
+  .mce-foot {
+    display: block;
+    background-color: $white;
+    border-top: 1px solid $color_pumice_approx;
+    .mce-btn {
+      border-color: $color_pumice_approx;
+      &.mce-primary {
+        border-color: transparent;
+      }
+    }
+  }
+  .mce-window-body {
+    .mce-listbox {
+      border-color: $color_mercury_approx;
+    }
+    .mce-btn {
+      border-color: $color_pumice_approx;
+    }
+  }
+  .mce-tooltip {
+    position: absolute;
+    padding: 5px;
+    opacity: .8;
+    filter: alpha(opacity=80);
+    zoom: 1;
+    margin-top: 1px;
+  }
+  .mce-tooltip-inner {
+    font-size: 11px;
+    background-color: $black;
+    color: $white;
+    max-width: 200px;
+    padding: 5px 8px 4px;
+    text-align: center;
+    white-space: normal;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+  }
+  .mce-tooltip-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 5px dashed $black;
+  }
+  .mce-tooltip-arrow-n {
+    border-bottom-color: $black;
+  }
+  .mce-tooltip-arrow-s {
+    border-top-color: $black;
+  }
+  .mce-tooltip-arrow-e {
+    border-left-color: $black;
+  }
+  .mce-tooltip-arrow-w {
+    border-right-color: $black;
+  }
+  .mce-tooltip-nw {
+    margin-left: -14px;
+    .mce-tooltip-arrow {
+      top: 0;
+      left: 10px;
+      border-bottom-style: solid;
+      border-top: none;
+      border-left-color: transparent;
+      border-right-color: transparent;
+    }
+  }
+  .mce-tooltip-sw {
+    margin-left: -14px;
+    .mce-tooltip-arrow {
+      bottom: 0;
+      left: 10px;
+      border-top-style: solid;
+      border-bottom: none;
+      border-left-color: transparent;
+      border-right-color: transparent;
+    }
+  }
+  .mce-tooltip-ne {
+    margin-left: 14px;
+    .mce-tooltip-arrow {
+      top: 0;
+      right: 10px;
+      border-bottom-style: solid;
+      border-top: none;
+      border-left-color: transparent;
+      border-right-color: transparent;
+    }
+  }
+  .mce-tooltip-se {
+    margin-left: 14px;
+    .mce-tooltip-arrow {
+      bottom: 0;
+      right: 10px;
+      border-top-style: solid;
+      border-bottom: none;
+      border-left-color: transparent;
+      border-right-color: transparent;
+    }
+  }
+  .mce-progress {
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    .mce-bar-container {
+      display: inline-block;
+      width: 100px;
+      height: 100%;
+      margin-right: 8px;
+      border: 1px solid $color_celeste_approx;
+      overflow: hidden;
+    }
+    .mce-text {
+      display: inline-block;
+      margin-top: auto;
+      margin-bottom: auto;
+      font-size: 14px;
+      width: 40px;
+      color: $color_chicago_approx;
+    }
+  }
+  .mce-bar {
+    display: block;
+    width: 0;
+    height: 100%;
+    background-color: $color_bon_jour_approx;
+    -webkit-transition: width .2s ease;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: width .2s ease;
+  }
+  .mce-notification {
+    position: absolute;
+    background-color: $white;
+    padding: 5px;
+    margin-top: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color_pumice_approx;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: transform 100ms ease-in, opacity 150ms ease-in;
+    opacity: 0;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    &.mce-in {
+      opacity: 1;
+    }
+    &.mce-has-close {
+      padding-right: 15px;
+    }
+    .mce-ico {
+      margin-top: 5px;
+    }
+    .mce-progress {
+      margin-right: 8px;
+      .mce-text {
+        margin-top: 5px;
+        color: $color_chicago_approx;
+      }
+      .mce-bar-container {
+        border-color: $color_pumice_approx;
+        .mce-bar {
+          background-color: $color_chicago_approx;
+        }
+      }
+    }
+    * {
+      color: $color_chicago_approx;
+    }
+    .mce-close {
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 20px;
+      color: $color_star_dust_approx;
+      cursor: pointer;
+    }
+  }
+  .mce-notification-success {
+    background-color: $color_willow_brook_approx;
+    border-color: $color_beryl_green_approx;
+    * {
+      color: $color_killarney_approx;
+    }
+    .mce-progress {
+      .mce-text {
+        color: $color_killarney_approx;
+      }
+      .mce-bar-container {
+        border-color: $color_beryl_green_approx;
+        .mce-bar {
+          background-color: $color_killarney_approx;
+        }
+      }
+    }
+  }
+  .mce-notification-info {
+    background-color: $color_link_water_approx;
+    border-color: $color_glacier_approx;
+    * {
+      color: $color_calypso_approx;
+    }
+    .mce-progress {
+      .mce-text {
+        color: $color_calypso_approx;
+      }
+      .mce-bar-container {
+        border-color: $color_glacier_approx;
+        .mce-bar {
+          background-color: $color_calypso_approx;
+        }
+      }
+    }
+  }
+  .mce-notification-warning {
+    background-color: $color_solitaire_approx;
+    border-color: $color_champagne_approx;
+    * {
+      color: $color_pesto_approx;
+    }
+    .mce-progress {
+      .mce-text {
+        color: $color_pesto_approx;
+      }
+      .mce-bar-container {
+        border-color: $color_champagne_approx;
+        .mce-bar {
+          background-color: $color_pesto_approx;
+        }
+      }
+    }
+  }
+  .mce-notification-error {
+    background-color: $color_vanilla_ice_approx;
+    border-color: $color_oyster_pink_approx;
+    * {
+      color: $color_apple_blossom_approx;
+    }
+    .mce-progress {
+      .mce-text {
+        color: $color_apple_blossom_approx;
+      }
+      .mce-bar-container {
+        border-color: $color_oyster_pink_approx;
+        .mce-bar {
+          background-color: $color_apple_blossom_approx;
+        }
+      }
+    }
+  }
+  .mce-notification-inner {
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    //Instead of the line below you could use @include word-break($value)
+    word-break: break-all;
+    //Instead of the line below you could use @include word-break($value)
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    //Instead of the line below you could use @include hyphens($value)
+    hyphens: auto;
+    display: inline-block;
+    font-size: 14px;
+    margin: 5px 8px 4px;
+    text-align: center;
+    white-space: normal;
+    color: $color_calypso_approx;
+    a {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  .mce-abs-layout {
+    position: relative;
+  }
+  .mce-abs-end {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+  }
+  .mce-btn {
+    border: 1px solid $color_nobel_approx;
+    border-color: transparent transparent transparent transparent;
+    position: relative;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 0 1px 1px $white_75;
+    background: $white;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    &:hover {
+      @extend %extend_5;
+      .mce-caret {
+        border-top-color: $color_french_gray_approx;
+      }
+    }
+    &:active {
+      @extend %extend_5;
+    }
+    &:focus {
+      background: $white;
+      color: $color_chicago_approx;
+      border-color: $color_mercury_approx;
+    }
+    &.mce-disabled {
+      button {
+        @extend %extend_6;
+      }
+      &:hover button {
+        @extend %extend_6;
+      }
+    }
+    &.mce-active {
+      @extend %extend_7;
+      &:hover {
+        @extend %extend_7;
+        button {
+          color: $white;
+        }
+        i {
+          color: $white;
+        }
+        .mce-caret {
+          border-top-color: $white;
+        }
+      }
+      &:focus {
+        @extend %extend_7;
+      }
+      &:active {
+        @extend %extend_7;
+      }
+      button {
+        color: $white;
+      }
+      i {
+        color: $white;
+      }
+      .mce-caret {
+        border-top-color: $white;
+      }
+    }
+    button {
+      padding: 4px 6px;
+      font-size: 14px;
+      line-height: 20px;
+      *line-height: 16px;
+      cursor: pointer;
+      color: $color_chicago_approx;
+      text-align: center;
+      overflow: visible;
+      -webkit-appearance: none;
+    }
+    button::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+    i {
+      //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: 1px 1px none;
+    }
+    .mce-txt {
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+    }
+    .mce-caret {
+      margin-top: 8px;
+      margin-left: 0;
+    }
+  }
+  .mce-primary {
+    color: $white;
+    border: 1px solid transparent;
+    border-color: transparent;
+    background-color: $color_mariner_approx;
+    &.mce-btn-has-text {
+      min-width: 50px;
+    }
+    &:hover {
+      background-color: $color_denim_approx;
+      border-color: transparent;
+    }
+    &:focus {
+      background-color: $color_denim_approx;
+      border-color: transparent;
+    }
+    &.mce-disabled {
+      button {
+        @extend %extend_8;
+      }
+      &:hover button {
+        @extend %extend_8;
+      }
+    }
+    &.mce-active {
+      @extend %extend_9;
+      &:hover {
+        @extend %extend_9;
+      }
+    }
+    button {
+      color: $white;
+      //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: 1px 1px none;
+      i {
+        color: $white;
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: 1px 1px none;
+      }
+    }
+    &:not(.mce-disabled):active {
+      @extend %extend_9;
+    }
+  }
+  .mce-btn-large {
+    button {
+      padding: 9px 14px;
+      font-size: 16px;
+      line-height: normal;
+    }
+    i {
+      margin-top: 2px;
+    }
+  }
+  .mce-btn-small {
+    button {
+      padding: 1px 5px;
+      font-size: 12px;
+      *padding-bottom: 2px;
+    }
+    i {
+      line-height: 20px;
+      vertical-align: top;
+      *line-height: 18px;
+    }
+    .mce-caret {
+      margin-top: 8px;
+      margin-left: 0;
+    }
+    .mce-ico {
+      font-family: $font_1, $font_4;
+    }
+  }
+  .mce-caret {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 0;
+    height: 0;
+    vertical-align: top;
+    border-top: 4px solid $color_french_gray_approx;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    content: "";
+    &.mce-up {
+      border-bottom: 4px solid $color_french_gray_approx;
+      border-top: 0;
+    }
+  }
+  .mce-disabled {
+    .mce-caret {
+      border-top-color: $color_silver_chalice_approx;
+    }
+    .mce-path-item {
+      color: $color_silver_chalice_approx;
+    }
+  }
+  .mce-btn-flat {
+    border: 0;
+    background: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    filter: none;
+    &:hover {
+      @extend %extend_10;
+    }
+    &.mce-active {
+      @extend %extend_10;
+    }
+    &:focus {
+      @extend %extend_10;
+    }
+    &:active {
+      @extend %extend_10;
+    }
+  }
+  .mce-btn-group {
+    margin-left: 2px;
+    .mce-btn {
+      border-width: 1px;
+      margin: 0;
+      margin-left: 2px;
+      &.mce-flow-layout-item {
+        margin: 0;
+      }
+    }
+    &:not(:first-child) {
+      border-left: 1px solid $color_alto_approx;
+      padding-left: 0;
+      margin-left: 2px;
+    }
+  }
+  .mce-checkbox {
+    cursor: pointer;
+    &.mce-disabled {
+      .mce-label {
+        color: $color_silver_approx;
+      }
+      i.mce-i-checkbox {
+        color: $color_silver_approx;
+      }
+    }
+    .mce-label {
+      vertical-align: middle;
+    }
+    &:focus i.mce-i-checkbox {
+      @extend %extend_11;
+    }
+    &.mce-focus i.mce-i-checkbox {
+      @extend %extend_11;
+    }
+  }
+  i {
+    &.mce-i-checkbox {
+      margin: 0 3px 0 0;
+      border: 1px solid $color_pumice_approx;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: none;
+      background-color: $white;
+      text-indent: -10em;
+      overflow: hidden;
+    }
+    &.mce-i-resize {
+      color: $color_chicago_approx;
+    }
+    &.mce-i-backcolor {
+      //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: none;
+      background: $color_pink_swan_approx;
+    }
+  }
+  .mce-combobox {
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    *height: 32px;
+    input {
+      border: 1px solid $color_pumice_approx;
+      border-right-color: $color_pumice_approx;
+      height: 28px;
+    }
+    &.mce-disabled {
+      input {
+        color: $color_silver_approx;
+      }
+      .mce-btn button {
+        cursor: default;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        opacity: .4;
+        filter: alpha(opacity=40);
+        zoom: 1;
+      }
+    }
+    .mce-btn {
+      border: 1px solid $color_pumice_approx;
+      border-left: 0;
+      margin: 0;
+    }
+    button {
+      padding-right: 8px;
+      padding-left: 8px;
+    }
+    .mce-status {
+      position: absolute;
+      right: 2px;
+      top: 50%;
+      line-height: 16px;
+      margin-top: -8px;
+      font-size: 12px;
+      width: 15px;
+      height: 15px;
+      text-align: center;
+      cursor: pointer;
+      &.mce-i-warning {
+        color: $color_tussock_approx;
+      }
+      &.mce-i-checkmark {
+        color: $color_hippie_green_approx;
+      }
+    }
+    &.mce-has-status input {
+      padding-right: 20px;
+    }
+    &.mce-has-open .mce-status {
+      right: 37px;
+    }
+  }
+  .mce-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    background: transparent;
+    z-index: 1000;
+    padding: 5px 0;
+    margin: -1px 0 0;
+    min-width: 180px;
+    background: $white;
+    border: 1px solid $color_ghost_approx;
+    border: 1px solid $color_mercury_approx;
+    z-index: 1002;
+    -webkit-box-shadow: 0 1px 2px $black_20;
+    -moz-box-shadow: 0 1px 2px $black_20;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 1px 2px $black_20;
+    max-height: 500px;
+    overflow: auto;
+    overflow-x: hidden;
+    &.mce-combobox-menu {
+      border-top: 0;
+      margin-top: 0;
+      max-height: 200px;
+      .mce-menu-item {
+        padding: 4px 6px 4px 4px;
+        font-size: 11px;
+      }
+      .mce-menu-item-sep {
+        padding: 0;
+      }
+      .mce-text {
+        font-size: 11px;
+        b {
+          font-size: 11px;
+        }
+      }
+      .mce-menu-item-link {
+        font-size: 11px;
+        b {
+          font-size: 11px;
+        }
+      }
+    }
+    &.mce-rtl {
+      direction: rtl;
+    }
+    .mce-throbber-inline {
+      height: 25px;
+      background-size: contain;
+    }
+    &.mce-animate {
+      opacity: .01;
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: rotateY(10deg) rotateX(-10deg);
+      //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+      transform-origin: left top;
+    }
+    &.mce-menu-align {
+      .mce-menu-shortcut {
+        position: absolute;
+        right: 0;
+      }
+      .mce-caret {
+        position: absolute;
+        right: 0;
+      }
+    }
+    i {
+      display: none;
+    }
+    &.mce-in.mce-animate {
+      opacity: 1;
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: rotateY(0) rotateX(0);
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: opacity .075s ease, transform .1s ease;
+    }
+  }
+  .mce-colorbutton {
+    .mce-ico {
+      position: relative;
+    }
+    .mce-preview {
+      padding-right: 3px;
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -17px;
+      margin-top: 7px;
+      background: $gray;
+      width: 13px;
+      height: 2px;
+      overflow: hidden;
+    }
+    &.mce-btn-small .mce-preview {
+      margin-left: -16px;
+      padding-right: 0;
+      width: 16px;
+    }
+  }
+  .mce-colorbutton-grid {
+    margin: 4px;
+  }
+  .mce-colorpicker {
+    position: relative;
+    width: 250px;
+    height: 220px;
+  }
+  .mce-colorpicker-sv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    border: 1px solid $color_pumice_approx;
+    cursor: crosshair;
+    overflow: hidden;
+  }
+  .mce-colorpicker-h-chunk {
+    width: 100%;
+  }
+  .mce-colorpicker-overlay1 {
+    @extend %extend_12;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr='#ffffff', endColorstr='#00ffffff');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#ffffff', endColorstr='#00ffffff')";
+    background: linear-gradient(to right, $white, rgba(255, 255, 255, 0));
+  }
+  .mce-colorpicker-overlay2 {
+    @extend %extend_12;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#00000000', endColorstr='#000000');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#00000000', endColorstr='#000000')";
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), $black);
+  }
+  .mce-colorpicker-selector1 {
+    background: none;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    margin: -8px 0 0 -8px;
+    border: 1px solid $black;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+  }
+  .mce-colorpicker-selector2 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid $white;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+  }
+  .mce-colorpicker-h {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6.5%;
+    height: 100%;
+    border: 1px solid $color_pumice_approx;
+    cursor: crosshair;
+  }
+  .mce-colorpicker-h-marker {
+    margin-top: -4px;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 100%;
+    border: 1px solid $black;
+    background: $white;
+    height: 4px;
+    z-index: 100;
+  }
+  .mce-path {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    padding: 8px;
+    white-space: normal;
+    font-size: inherit;
+    .mce-txt {
+      display: inline-block;
+      padding-right: 3px;
+    }
+    .mce-path-body {
+      display: inline-block;
+    }
+    .mce-divider {
+      display: inline;
+      font-size: inherit;
+    }
+  }
+  .mce-path-item {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    cursor: pointer;
+    color: $color_chicago_approx;
+    font-size: inherit;
+    text-transform: uppercase;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:focus {
+      background: $color_scarpa_flow_approx;
+      color: $white;
+    }
+  }
+  .mce-fieldset {
+    border: 0 solid $color_star_dust_approx;
+    > .mce-container-body {
+      margin-top: -15px;
+    }
+  }
+  .mce-fieldset-title {
+    margin-left: 5px;
+    padding: 0 5px;
+  }
+  .mce-fit-layout {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+  }
+  .mce-fit-layout-item {
+    position: absolute;
+  }
+  .mce-flow-layout-item {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin: 2px 0 2px 2px;
+    &.mce-last {
+      margin-right: 2px;
+    }
+  }
+  .mce-flow-layout {
+    white-space: normal;
+  }
+  .mce-iframe {
+    border: 0 solid $color_pumice_approx;
+    width: 100%;
+    height: 100%;
+  }
+  .mce-infobox {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 0 1px 1px $white_75;
+    overflow: hidden;
+    border: 1px solid $red;
+    div {
+      display: block;
+      margin: 5px;
+      button {
+        position: absolute;
+        top: 50%;
+        right: 4px;
+        cursor: pointer;
+        margin-top: -8px;
+        display: none;
+        &:focus {
+          outline: 2px solid $color_mercury_approx;
+        }
+      }
+    }
+    &.mce-has-help {
+      div {
+        margin-right: 25px;
+      }
+      button {
+        display: block;
+      }
+    }
+    &.mce-success {
+      background: $color_willow_brook_approx;
+      border-color: $color_beryl_green_approx;
+      div {
+        color: $color_killarney_approx;
+      }
+    }
+    &.mce-warning {
+      background: $color_solitaire_approx;
+      border-color: $color_champagne_approx;
+      div {
+        color: $color_pesto_approx;
+      }
+    }
+    &.mce-error {
+      background: $color_vanilla_ice_approx;
+      border-color: $color_oyster_pink_approx;
+      div {
+        color: $color_apple_blossom_approx;
+      }
+    }
+  }
+  .mce-label {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 0 1px 1px $white_75;
+    overflow: hidden;
+    &.mce-autoscroll {
+      overflow: auto;
+    }
+    &.mce-disabled {
+      color: $color_silver_chalice_approx;
+    }
+    &.mce-multiline {
+      white-space: pre-wrap;
+    }
+    &.mce-success {
+      color: $color_hippie_green_approx;
+    }
+    &.mce-warning {
+      color: $color_tussock_approx;
+    }
+    &.mce-error {
+      color: $color_chestnut_approx;
+    }
+  }
+  .mce-menubar {
+    border: 1px solid $color_mercury_approx;
+    .mce-menubtn {
+      border-color: transparent;
+      background: transparent;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: none;
+      filter: none;
+      &:hover {
+        @extend %extend_13;
+        .mce-caret {
+          border-top-color: $color_french_gray_approx;
+        }
+      }
+      &.mce-active {
+        @extend %extend_13;
+        border-bottom: none;
+        z-index: 65537;
+      }
+      &:focus {
+        @extend %extend_13;
+      }
+      button span {
+        color: $color_chicago_approx;
+      }
+    }
+    .mce-caret {
+      border-top-color: $color_french_gray_approx;
+    }
+    .mce-active .mce-caret {
+      border-top-color: $color_french_gray_approx;
+    }
+  }
+  .mce-menubtn {
+    button {
+      color: $color_chicago_approx;
+    }
+    &.mce-fixed-width {
+      span {
+        display: inline-block;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        width: 90px;
+      }
+      &.mce-btn-small span {
+        width: 70px;
+      }
+    }
+    .mce-caret {
+      *margin-top: 6px;
+    }
+    &.mce-btn-small span {
+      font-size: 12px;
+    }
+  }
+  .mce-menu-item {
+    display: block;
+    padding: 6px 4px;
+    clear: both;
+    font-weight: normal;
+    line-height: 20px;
+    color: $color_chicago_approx;
+    white-space: nowrap;
+    cursor: pointer;
+    line-height: normal;
+    border-left: 4px solid transparent;
+    margin-bottom: 1px;
+    .mce-text {
+      line-height: 1;
+      vertical-align: initial;
+      b {
+        line-height: 1;
+        vertical-align: initial;
+      }
+    }
+    .mce-caret {
+      margin-top: 4px;
+      margin-right: 6px;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 4px solid $color_chicago_approx;
+    }
+    .mce-menu-shortcut {
+      display: inline-block;
+      padding: 0 10px 0 20px;
+      color: $color_silver_chalice_approx;
+    }
+    .mce-ico {
+      padding-right: 4px;
+    }
+    &:hover {
+      background: $color_gallery_approx;
+      .mce-menu-shortcut {
+        color: $color_silver_chalice_approx;
+      }
+      .mce-text {
+        color: $color_chicago_approx;
+      }
+      .mce-ico {
+        color: $color_chicago_approx;
+      }
+      * {
+        color: $color_chicago_approx;
+      }
+    }
+    &:focus {
+      background: $color_gallery_approx;
+      .mce-menu-shortcut {
+        color: $color_silver_chalice_approx;
+      }
+      .mce-text {
+        color: $color_chicago_approx;
+      }
+      .mce-ico {
+        color: $color_chicago_approx;
+      }
+      * {
+        color: $color_chicago_approx;
+      }
+    }
+    &.mce-selected {
+      background: $color_gallery_approx;
+      .mce-text {
+        color: $color_chicago_approx;
+      }
+      .mce-ico {
+        color: $color_chicago_approx;
+      }
+      * {
+        color: $color_chicago_approx;
+      }
+    }
+    &.mce-active {
+      &.mce-menu-item-normal {
+        background: $color_scarpa_flow_approx;
+        .mce-text {
+          color: $white;
+        }
+        .mce-ico {
+          color: $white;
+        }
+      }
+      &.mce-menu-item-checkbox .mce-ico {
+        visibility: visible;
+      }
+    }
+    &.mce-disabled {
+      background: $white;
+      &:hover {
+        background: $white;
+        &:focus {
+          background: $color_gallery_approx;
+        }
+        .mce-text {
+          color: $color_silver_chalice_approx;
+        }
+        .mce-ico {
+          color: $color_silver_chalice_approx;
+        }
+      }
+      &:focus {
+        background: $color_gallery_approx;
+      }
+      .mce-text {
+        color: $color_silver_chalice_approx;
+      }
+      .mce-ico {
+        color: $color_silver_chalice_approx;
+      }
+    }
+    &.mce-menu-item-preview.mce-active {
+      border-left: 5px solid $color_scarpa_flow_approx;
+      background: $white;
+      .mce-text {
+        color: $color_chicago_approx;
+      }
+      .mce-ico {
+        color: $color_chicago_approx;
+      }
+      &:hover {
+        background: $color_gallery_approx;
+      }
+    }
+  }
+  .mce-menu-item-link {
+    color: $color_salem_approx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    b {
+      color: $color_salem_approx;
+    }
+  }
+  .mce-menu-item-ellipsis {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .mce-menu-item-indent-1 {
+    padding-left: 20px;
+  }
+  .mce-menu-item-indent-2 {
+    padding-left: 35px;
+  }
+  .mce-menu-item-indent-3 {
+    padding-left: 40px;
+  }
+  .mce-menu-item-indent-4 {
+    padding-left: 45px;
+  }
+  .mce-menu-item-indent-5 {
+    padding-left: 50px;
+  }
+  .mce-menu-item-indent-6 {
+    padding-left: 55px;
+  }
+  .mce-throbber {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    filter: alpha(opacity=60);
+    zoom: 1;
+    background: $white $url_0 no-repeat center center;
+  }
+  .mce-throbber-inline {
+    position: static;
+    height: 50px;
+  }
+  .mce-menu-sub-tr-tl {
+    margin: -6px 0 0 -1px;
+  }
+  .mce-menu-sub-br-bl {
+    margin: 6px 0 0 -1px;
+  }
+  .mce-menu-sub-tl-tr {
+    margin: -6px 0 0 1px;
+  }
+  .mce-menu-sub-bl-br {
+    margin: 6px 0 0 1px;
+  }
+  .mce-listbox {
+    button {
+      text-align: left;
+      padding-right: 20px;
+      position: relative;
+    }
+    .mce-caret {
+      position: absolute;
+      margin-top: -2px;
+      right: 8px;
+      top: 50%;
+    }
+  }
+  .mce-selectbox {
+    background: $white;
+    border: 1px solid $color_pumice_approx;
+  }
+  .mce-slider {
+    border: 1px solid $color_pumice_approx;
+    background: $white;
+    width: 100px;
+    height: 10px;
+    position: relative;
+    display: block;
+    &.mce-vertical {
+      width: 10px;
+      height: 100px;
+    }
+  }
+  .mce-slider-handle {
+    border: 1px solid $color_pumice_approx;
+    background: $color_mercury_approx;
+    display: block;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -1px;
+    margin-top: -2px;
+    &:focus {
+      border-color: $color_mariner_approx;
+    }
+  }
+  .mce-spacer {
+    visibility: hidden;
+  }
+  .mce-splitbtn {
+    .mce-open {
+      border-left: 1px solid transparent;
+      padding-right: 4px;
+      padding-left: 4px;
+      &:focus {
+        border-left: 1px solid $color_mercury_approx;
+      }
+      &:hover {
+        border-left: 1px solid $color_mercury_approx;
+      }
+      &:active {
+        border-left: 1px solid $color_mercury_approx;
+      }
+    }
+    &.mce-opened {
+      border-color: $color_mercury_approx;
+    }
+    &:hover .mce-open {
+      border-left: 1px solid $color_mercury_approx;
+    }
+    &.mce-active:hover .mce-open {
+      border-left: 1px solid $white;
+    }
+    &.mce-btn-small .mce-open {
+      padding: 0 3px;
+    }
+  }
+  .mce-stack-layout-item {
+    display: block;
+  }
+  .mce-tabs {
+    display: block;
+    border-bottom: 1px solid $color_pumice_approx;
+    background: $white;
+    + .mce-container-body {
+      background: $white;
+    }
+  }
+  .mce-tab {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    border: 1px solid $color_pumice_approx;
+    border-width: 0 1px 0 0;
+    background: $white;
+    padding: 8px 15px;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 0 1px 1px $white_75;
+    height: 13px;
+    cursor: pointer;
+    &:hover {
+      background: $color_romance_approx;
+    }
+    &.mce-active {
+      background: $color_romance_approx;
+      border-bottom-color: transparent;
+      margin-bottom: -1px;
+      height: 14px;
+    }
+    &:focus {
+      color: $color_mariner_approx;
+    }
+  }
+  .mce-textbox {
+    background: $white;
+    border: 1px solid $color_pumice_approx;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    display: inline-block;
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: border linear .2s, box-shadow linear .2s;
+    height: 28px;
+    resize: none;
+    padding: 0 4px;
+    white-space: pre-wrap;
+    *white-space: pre;
+    color: $color_chicago_approx;
+    &:focus {
+      @extend %extend_15;
+    }
+    &.mce-focus {
+      @extend %extend_15;
+    }
+    &.mce-multiline {
+      padding: 4px;
+      height: auto;
+    }
+    &.mce-disabled {
+      color: $color_silver_approx;
+    }
+  }
+  .mce-dropzone {
+    border: 3px dashed $gray;
+    text-align: center;
+    span {
+      text-transform: uppercase;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &:after {
+      content: "";
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &.mce-disabled {
+      opacity: .4;
+      filter: alpha(opacity=40);
+      zoom: 1;
+      &.mce-dragenter {
+        cursor: not-allowed;
+      }
+    }
+  }
+  .mce-browsebutton {
+    position: relative;
+    overflow: hidden;
+    button {
+      position: relative;
+      z-index: 1;
+    }
+    input {
+      opacity: 0;
+      filter: alpha(opacity=0);
+      zoom: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+  } /*
+  @font-face {
+    font-family: $font_0;
+    src: $url_1;
+    src: $url_2 format('embedded-opentype'), $url_3 format('woff'), $url_4 format('truetype'), $url_5 format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: $font_1;
+    src: $url_6;
+    src: $url_7 format('embedded-opentype'), $url_8 format('woff'), $url_9 format('truetype'), $url_10 format('svg');
+    font-weight: normal;
+    font-style: normal;
+  } */
+  .mce-ico {
+    font-family: $font_0, $font_4;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 16px;
+    line-height: 16px;
+    speak: none;
+    vertical-align: text-top;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    background: transparent center center;
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    color: $color_chicago_approx;
+  }
+  .mce-i-insert {
+    font-size: 14px;
+    &:before {
+      content: "\e93a";
+    }
+  }
+  .mce-i-selected {
+    visibility: hidden;
+    &:before {
+      content: "\e033";
+    }
+  }
+  .mce-colorbtn-trans div {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 16px;
+    color: $color_stack_approx;
+  }
+  .mce-toolbar-grp .mce-flow-layout-item {
+    margin-bottom: 0;
+  }
+  .mce-imagetool.mce-btn .mce-ico {
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 20px;
+    padding: 5px;
+  }
+  .mce-edit-aria-container > .mce-container-body {
+    display: flex;
+    .mce-edit-area {
+      flex: 1;
+    }
+    .mce-sidebar-panel {
+      min-width: 250px;
+      max-width: 250px;
+      position: relative;
+      > .mce-container-body {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        top: 0;
+        left: 0;
+      }
+    }
+    .mce-sidebar > .mce-container-body {
+      display: flex;
+      align-items: stretch;
+      height: 100%;
+    }
+  }
+  .mce-close:hover i {
+    color: $color_silver_approx;
+  }
+  .mce-tooltip-n .mce-tooltip-arrow {
+    top: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-bottom-style: solid;
+    border-top: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+  .mce-tooltip-s .mce-tooltip-arrow {
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-top-style: solid;
+    border-bottom: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+  .mce-tooltip-e .mce-tooltip-arrow {
+    right: 0;
+    top: 50%;
+    margin-top: -5px;
+    border-left-style: solid;
+    border-right: none;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+  }
+  .mce-tooltip-w .mce-tooltip-arrow {
+    left: 0;
+    top: 50%;
+    margin-top: -5px;
+    border-right-style: solid;
+    border-left: none;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+  }
+  html .mce-abs-layout-item {
+    position: absolute;
+  }
+  .mce-btn-has-text .mce-ico {
+    padding-right: 5px;
+  }
+  .mce-toolbar .mce-btn-group {
+    margin: 0;
+    padding: 2px 0;
+  }
+  .mce-checked i.mce-i-checkbox {
+    color: $color_chicago_approx;
+    font-size: 16px;
+    line-height: 16px;
+    text-indent: 0;
+  }
+  .mce-colorbox i {
+    border: 1px solid $color_pumice_approx;
+    width: 14px;
+    height: 14px;
+  }
+  .mce-tinymce-inline .mce-flow-layout {
+    white-space: nowrap;
+  }
+  .mce-menu-item-sep:hover {
+    @extend %extend_14;
+  }
+  .mce-menu-has-icons i {
+    display: inline-block;
+  }
+  .mce-placeholder .mce-textbox {
+    color: $color_silver_chalice_approx;
+  }
+  .mce-i-save:before {
+    content: "\e000";
+  }
+  .mce-i-newdocument:before {
+    content: "\e001";
+  }
+  .mce-i-fullpage:before {
+    content: "\e002";
+  }
+  .mce-i-alignleft:before {
+    content: "\e003";
+  }
+  .mce-i-aligncenter:before {
+    content: "\e004";
+  }
+  .mce-i-alignright:before {
+    content: "\e005";
+  }
+  .mce-i-alignjustify:before {
+    content: "\e006";
+  }
+  .mce-i-alignnone:before {
+    content: "\e003";
+  }
+  .mce-i-cut:before {
+    content: "\e007";
+  }
+  .mce-i-paste:before {
+    content: "\e008";
+  }
+  .mce-i-searchreplace:before {
+    content: "\e009";
+  }
+  .mce-i-bullist:before {
+    content: "\e00a";
+  }
+  .mce-i-numlist:before {
+    content: "\e00b";
+  }
+  .mce-i-indent:before {
+    content: "\e00c";
+  }
+  .mce-i-outdent:before {
+    content: "\e00d";
+  }
+  .mce-i-blockquote:before {
+    content: "\e00e";
+  }
+  .mce-i-undo:before {
+    content: "\e00f";
+  }
+  .mce-i-redo:before {
+    content: "\e010";
+  }
+  .mce-i-link:before {
+    content: "\e011";
+  }
+  .mce-i-unlink:before {
+    content: "\e012";
+  }
+  .mce-i-anchor:before {
+    content: "\e013";
+  }
+  .mce-i-image:before {
+    content: "\e014";
+  }
+  .mce-i-media:before {
+    content: "\e015";
+  }
+  .mce-i-help:before {
+    content: "\e016";
+  }
+  .mce-i-code:before {
+    content: "\e017";
+  }
+  .mce-i-insertdatetime:before {
+    content: "\e018";
+  }
+  .mce-i-preview:before {
+    content: "\e019";
+  }
+  .mce-i-forecolor:before {
+    content: "\e01a";
+  }
+  .mce-i-backcolor:before {
+    content: "\e01a";
+  }
+  .mce-i-table:before {
+    content: "\e01b";
+  }
+  .mce-i-hr:before {
+    content: "\e01c";
+  }
+  .mce-i-removeformat:before {
+    content: "\e01d";
+  }
+  .mce-i-subscript:before {
+    content: "\e01e";
+  }
+  .mce-i-superscript:before {
+    content: "\e01f";
+  }
+  .mce-i-charmap:before {
+    content: "\e020";
+  }
+  .mce-i-emoticons:before {
+    content: "\e021";
+  }
+  .mce-i-print:before {
+    content: "\e022";
+  }
+  .mce-i-fullscreen:before {
+    content: "\e023";
+  }
+  .mce-i-spellchecker:before {
+    content: "\e024";
+  }
+  .mce-i-nonbreaking:before {
+    content: "\e025";
+  }
+  .mce-i-template:before {
+    content: "\e026";
+  }
+  .mce-i-pagebreak:before {
+    content: "\e027";
+  }
+  .mce-i-restoredraft:before {
+    content: "\e028";
+  }
+  .mce-i-bold:before {
+    content: "\e02a";
+  }
+  .mce-i-italic:before {
+    content: "\e02b";
+  }
+  .mce-i-underline:before {
+    content: "\e02c";
+  }
+  .mce-i-strikethrough:before {
+    content: "\e02d";
+  }
+  .mce-i-visualchars:before {
+    content: "\e02e";
+  }
+  .mce-i-visualblocks:before {
+    content: "\e02e";
+  }
+  .mce-i-ltr:before {
+    content: "\e02f";
+  }
+  .mce-i-rtl:before {
+    content: "\e030";
+  }
+  .mce-i-copy:before {
+    content: "\e031";
+  }
+  .mce-i-resize:before {
+    content: "\e032";
+  }
+  .mce-i-browse:before {
+    content: "\e034";
+  }
+  .mce-i-pastetext:before {
+    content: "\e035";
+  }
+  .mce-i-rotateleft:before {
+    content: "\eaa8";
+  }
+  .mce-i-rotateright:before {
+    content: "\eaa9";
+  }
+  .mce-i-crop:before {
+    content: "\ee78";
+  }
+  .mce-i-editimage:before {
+    content: "\e915";
+  }
+  .mce-i-options:before {
+    content: "\ec6a";
+  }
+  .mce-i-flipv:before {
+    content: "\eaaa";
+  }
+  .mce-i-fliph:before {
+    content: "\eaac";
+  }
+  .mce-i-zoomin:before {
+    content: "\eb35";
+  }
+  .mce-i-zoomout:before {
+    content: "\eb36";
+  }
+  .mce-i-sun:before {
+    content: "\eccc";
+  }
+  .mce-i-moon:before {
+    content: "\eccd";
+  }
+  .mce-i-arrowleft:before {
+    content: "\edc0";
+  }
+  .mce-i-arrowright:before {
+    content: "\e93c";
+  }
+  .mce-i-drop:before {
+    content: "\e935";
+  }
+  .mce-i-contrast:before {
+    content: "\ecd4";
+  }
+  .mce-i-sharpen:before {
+    content: "\eba7";
+  }
+  .mce-i-resize2:before {
+    content: "\edf9";
+  }
+  .mce-i-orientation:before {
+    content: "\e601";
+  }
+  .mce-i-invert:before {
+    content: "\e602";
+  }
+  .mce-i-gamma:before {
+    content: "\e600";
+  }
+  .mce-i-remove:before {
+    content: "\ed6a";
+  }
+  .mce-i-tablerowprops:before {
+    content: "\e604";
+  }
+  .mce-i-tablecellprops:before {
+    content: "\e605";
+  }
+  .mce-i-table2:before {
+    content: "\e606";
+  }
+  .mce-i-tablemergecells:before {
+    content: "\e607";
+  }
+  .mce-i-tableinsertcolbefore:before {
+    content: "\e608";
+  }
+  .mce-i-tableinsertcolafter:before {
+    content: "\e609";
+  }
+  .mce-i-tableinsertrowbefore:before {
+    content: "\e60a";
+  }
+  .mce-i-tableinsertrowafter:before {
+    content: "\e60b";
+  }
+  .mce-i-tablesplitcells:before {
+    content: "\e60d";
+  }
+  .mce-i-tabledelete:before {
+    content: "\e60e";
+  }
+  .mce-i-tableleftheader:before {
+    content: "\e62a";
+  }
+  .mce-i-tabletopheader:before {
+    content: "\e62b";
+  }
+  .mce-i-tabledeleterow:before {
+    content: "\e800";
+  }
+  .mce-i-tabledeletecol:before {
+    content: "\e801";
+  }
+  .mce-i-codesample:before {
+    content: "\e603";
+  }
+  .mce-i-fill:before {
+    content: "\e902";
+  }
+  .mce-i-borderwidth:before {
+    content: "\e903";
+  }
+  .mce-i-line:before {
+    content: "\e904";
+  }
+  .mce-i-count:before {
+    content: "\e905";
+  }
+  .mce-i-translate:before {
+    content: "\e907";
+  }
+  .mce-i-drag:before {
+    content: "\e908";
+  }
+  .mce-i-home:before {
+    content: "\e90b";
+  }
+  .mce-i-upload:before {
+    content: "\e914";
+  }
+  .mce-i-bubble:before {
+    content: "\e91c";
+  }
+  .mce-i-user:before {
+    content: "\e91d";
+  }
+  .mce-i-lock:before {
+    content: "\e926";
+  }
+  .mce-i-unlock:before {
+    content: "\e927";
+  }
+  .mce-i-settings:before {
+    content: "\e928";
+  }
+  .mce-i-remove2:before {
+    content: "\e92a";
+  }
+  .mce-i-menu:before {
+    content: "\e92d";
+  }
+  .mce-i-warning:before {
+    content: "\e930";
+  }
+  .mce-i-question:before {
+    content: "\e931";
+  }
+  .mce-i-pluscircle:before {
+    content: "\e932";
+  }
+  .mce-i-info:before {
+    content: "\e933";
+  }
+  .mce-i-notice:before {
+    content: "\e934";
+  }
+  .mce-i-arrowup:before {
+    content: "\e93b";
+  }
+  .mce-i-arrowdown:before {
+    content: "\e93d";
+  }
+  .mce-i-arrowup2:before {
+    content: "\e93f";
+  }
+  .mce-i-arrowdown2:before {
+    content: "\e940";
+  }
+  .mce-i-menu2:before {
+    content: "\e941";
+  }
+  .mce-i-newtab:before {
+    content: "\e961";
+  }
+  .mce-i-a11y:before {
+    content: "\e900";
+  }
+  .mce-i-plus:before {
+    content: "\e93a";
+  }
+  .mce-i-minus:before {
+    content: "\e939";
+  }
+  .mce-i-books:before {
+    content: "\e911";
+  }
+  .mce-i-reload:before {
+    content: "\e906";
+  }
+  .mce-i-toc:before {
+    content: "\e901";
+  }
+  .mce-i-checkmark:before {
+    content: "\e033";
+  }
+  .mce-i-checkbox:before {
+    content: "\e033";
+  }
+}
