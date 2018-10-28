@@ -2,14 +2,26 @@
 // action-btns
 @import "./components/action-btns/action-btns";
 
+// badge
+@import "./components/badge/badge";
+
+// datetime
+@import "./components/datetime/datetime";
+
 // divider
 @import "./components/divider/divider";
 
 // input
 @import "./components/input/input";
 
+// markdown
+@import "./components/markdown/markdown";
+
 // modal
 @import "./components/modal/modal";
+
+// rte-tinymce
+@import "./components/rte-tinymce/rte-tinymce";
 
 // select
 @import "./components/select/select";
@@ -34,14 +46,26 @@
   // action-btns
   @include fs-component--action-btns($prefix);
 
+  // badge
+  @include fs-component--badge($prefix);
+
+  // datetime
+  @include fs-component--datetime($prefix);
+
   // divider
   @include fs-component--divider($prefix);
 
   // input
   @include fs-component--input($prefix);
 
+  // markdown
+  @include fs-component--markdown($prefix);
+
   // modal
   @include fs-component--modal($prefix);
+
+  // rte-tinymce
+  @include fs-component--rte-tinymce($prefix);
 
   // select
   @include fs-component--select($prefix);

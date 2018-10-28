@@ -1,0 +1,316 @@
+@import "../../config";
+@import "../../_utils/flexbox";
+
+@mixin fs-component--datetime($prefix) {
+
+  /*!
+ * https://github.com/YouCanBookMe/react-datetime
+ */
+
+  #{$prefix}datetime {
+    position: relative;
+
+    #{$prefix}datetime--input-wrapper {
+      padding: 4px 0 8px;
+      position: relative;
+      @include flexbox;
+      @include align-items(center);
+
+      &:before {
+        content: attr(data-title) '';
+        text-transform: initial;
+        position: absolute;
+        bottom: 4px;
+        left: 6px;
+        color: $fs__color__text_primary;
+        font-size: 11px;
+        line-height: 11px;
+        background-color: $fs__color__background__primary;
+        padding: 0 2px;
+      }
+
+      #{$prefix}datetime--input {
+        @include flex(1);
+        border: 0 solid $fs__color__border__light;
+        border-bottom-width: 2px;
+        // border-radius: 3px;
+        min-height: 22px;
+        max-width: calc(100% - 16px);
+        font-size: 12.5px;
+        font-weight: 300;
+        outline: none;
+        @include flex(1);
+        width: 100%;
+        padding: 4px 8px;
+        margin: 0;
+
+        &::placeholder {
+          color: lighten($fs__color__text_primary, 4);
+        }
+
+        &#{$prefix}-input-validation-indicator {
+          padding-right: 16px;
+        }
+
+      }
+
+      &#{$prefix}datetime--input-focus {
+        &:before {
+          color: $fs__color__accent__primary;
+        }
+
+        #{$prefix}datetime--input {
+          border-color: $fs__color__accent__primary;
+        }
+      }
+
+    }
+
+    .rdtPicker {
+      display: none;
+      position: absolute;
+      min-width: 220px;
+      padding: 4px;
+      margin-top: 1px;
+      z-index: 99999 !important;
+      background: $fs__color__background__primary;
+      box-shadow: 0 1px 3px $fs__color__shadow__light;
+      border: 2px solid $fs__color__border__light;
+      border-radius: 0 0 4px 4px;
+    }
+
+    &.rdtOpen .rdtPicker {
+      display: block;
+    }
+
+    &.rdtStatic .rdtPicker {
+      box-shadow: none;
+      position: static;
+    }
+
+    .rdtPicker {
+      .rdtTimeToggle {
+        text-align: center;
+        border-radius: 4px;
+      }
+      table {
+        width: 100%;
+        margin: 0;
+      }
+      td, th {
+        text-align: center;
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+      }
+      td {
+        cursor: pointer;
+        &.rdtDay:hover, &.rdtHour:hover, &.rdtMinute:hover, &.rdtSecond:hover {
+          background: $fs__color__border__light;
+          cursor: pointer;
+        }
+      }
+      .rdtTimeToggle:hover {
+        background: $fs__color__border__light;
+        cursor: pointer;
+      }
+      td {
+        &.rdtOld, &.rdtNew {
+          color: $fs__color__text_light;
+        }
+        &.rdtToday {
+          position: relative;
+          background-color: $fs__color__border__light;
+        }
+        &.rdtActive, &.rdtActive:hover {
+          background-color: $fs__color__accent__primary;
+          color: $fs__color__background__primary;
+        }
+        &.rdtDisabled {
+          background: none;
+          color: $fs__color__text_light;
+          cursor: not-allowed;
+          &:hover {
+            background: none;
+            color: $fs__color__text_light;
+            cursor: not-allowed;
+          }
+        }
+        span {
+          &.rdtOld {
+            color: $fs__color__text_light;
+          }
+          &.rdtDisabled {
+            background: none;
+            color: $fs__color__text_light;
+            cursor: not-allowed;
+            &:hover {
+              background: none;
+              color: $fs__color__text_light;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+
+      .dow {
+        // width: 14.2857%;
+        border-bottom: none;
+        cursor: default;
+      }
+      th {
+        &.rdtSwitch {
+          width: 100px;
+          border-radius: 4px;
+        }
+        &.rdtNext, &.rdtPrev {
+          font-size: 21px;
+          vertical-align: top;
+        }
+      }
+    }
+
+    .rdtPrev, .rdtNext {
+      position: relative;
+      min-height: 21px;
+      min-width: 30px;
+      border-radius: 4px;
+
+      span {
+        display: block;
+        font-size: 21px;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 4px;
+        color: $fs__color__accent__primary;
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Chrome/Safari/Opera */
+        -khtml-user-select: none;
+        /* Konqueror */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+      }
+    }
+
+    .rdtPicker {
+      th.rdtDisabled {
+        background: none;
+        color: $fs__color__text_primary;
+        cursor: not-allowed;
+        &:hover {
+          background: none;
+          color: $fs__color__text_primary;
+          cursor: not-allowed;
+        }
+      }
+      thead tr:first-child th {
+        cursor: pointer;
+        &:hover {
+          background: $fs__color__border__light;
+        }
+      }
+      tfoot {
+        border-top: 1px solid $fs__color__border__light;
+      }
+      button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        &:hover {
+          background-color: $fs__color__border__light;
+        }
+      }
+      thead button {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    td {
+      &.rdtMonth, &.rdtYear {
+        height: 50px;
+        width: 25%;
+        cursor: pointer;
+      }
+      &.rdtMonth:hover, &.rdtYear:hover {
+        background: $fs__color__border__light;
+      }
+    }
+
+    .rdtCounters {
+      @include flexbox;
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-direction(row);
+
+      > div {
+
+      }
+    }
+
+    .rdtCounter {
+      // height: 100px;
+      min-width: 40px;
+    }
+
+    .rdtCounterSeparator {
+      line-height: 100px;
+    }
+
+    .rdtCounter {
+      .rdtBtn {
+        height: 32px;
+        width: 32px;
+        margin: 4px;
+        line-height: 30px;
+        cursor: pointer;
+        display: block;
+        border-radius: 50%;
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Chrome/Safari/Opera */
+        -khtml-user-select: none;
+        /* Konqueror */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        &:hover {
+          background: $fs__color__border__light;
+        }
+        &:active {
+          background-color: $fs__color__accent__primary;
+          color: $fs__color__background__primary;
+        }
+      }
+      .rdtCount {
+        padding: 8px;
+        font-size: 1.2em;
+      }
+    }
+
+    .rdtMilli {
+      vertical-align: middle;
+      padding-left: 8px;
+      width: 48px;
+      input {
+        width: 100%;
+        font-size: 1.2em;
+        margin-top: 37px;
+      }
+    }
+
+    .rdtTime td {
+      cursor: default;
+    }
+  }
+
+}
